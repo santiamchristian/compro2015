@@ -1,0 +1,159 @@
+fileFormatVersion: 2
+guid: f20b58df591c30f43a72852729526bc4
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Play Game
+    21300002: High Scores
+    21300004: High Scores
+    21300006: Options
+    21300008: Exit Game
+    21300010: PlayGame
+    21300012: HighScores
+    21300014: MultiplayerSettings
+    21300016: Options
+    21300018: ExitGame
+    21300020: GameMenu_5
+    21300022: GameMenu_6
+    21300024: GameMenu_7
+    21300026: GameMenu_8
+    21300028: GameMenu_9
+    21300030: GameMenu_10
+    21300032: GameMenu_11
+    21300034: GameMenu_12
+    21300036: GameMenu_13
+    21300038: GameMenu_14
+    21300040: GameMenu_15
+    21300042: GameMenu_16
+    21300044: GameMenu_17
+    21300046: GameMenu_18
+    21300048: GameMenu_19
+    21300050: GameMenu_20
+    21300052: GameMenu_21
+    21300054: GameMenu_22
+    21300056: GameMenu_23
+    21300058: GameMenu_24
+    21300060: GameMenu_25
+    21300062: GameMenu_26
+    21300064: GameMenu_27
+    21300066: GameMenu_28
+    21300068: GameMenu_29
+    21300070: GameMenu_30
+    21300072: GameMenu_31
+    21300074: GameMenu_32
+    21300076: GameMenu_33
+    21300078: GameMenu_34
+    21300080: GameMenu_35
+    21300082: GameMenu_36
+    21300084: GameMenu_37
+    21300086: GameMenu_38
+    21300088: GameMenu_39
+    21300090: GameMenu_40
+    21300092: GameMenu_41
+    21300094: GameMenu_42
+    21300096: GameMenu_43
+    21300098: GameMenu_44
+    21300100: GameMenu_45
+    21300102: GameMenu_46
+    21300104: GameMenu_47
+    21300106: GameMenu_48
+    21300108: GameMenu_49
+    21300110: GameMenu_50
+    21300112: GameMenu_51
+    21300114: GameMenu_52
+    21300116: GameMenu_53
+    21300118: GameMenu_54
+    21300120: GameMenu_55
+    21300122: GameMenu_56
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: PlayGame
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 260
+        width: 267
+        height: 58
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: HighScores
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 208
+        width: 254
+        height: 48
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MultiplayerSettings
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 150
+        width: 413
+        height: 49
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Options
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 93
+        width: 197
+        height: 52
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ExitGame
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 42
+        width: 216
+        height: 44
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
