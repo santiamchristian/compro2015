@@ -17,20 +17,19 @@ public class MovementController : MonoBehaviour
 
     void Update()
     {
-        if (controller.isGrounded)
-        {
-            moveDirection = transform.TransformDirection(moveDirection);
-            moveDirection *= speed;
-        }
-        moveDirection.y -= gravity * Time.deltaTime;
-        controller.Move(moveDirection * Time.deltaTime);
+        Fall();
+        Move();
 
     }
-
-    public void Move(Vector3 moveDirection)
+    private void Fall()
+    {
+        if(! controller.isGrounded)
+        velocity.y -= gravity * Time.deltaTime;
+    }
+    private void Move()
     {   if (controller.isGrounded)
         {
-            this.moveDirection = moveDirection;
+            controller.Move(velocity);
         }
     }
 
@@ -38,9 +37,15 @@ public class MovementController : MonoBehaviour
     {
         if (controller.isGrounded)
         {
-            moveDirection.y = jumpSpeed;
+            velocity.y = jumpSpeed;
 
         }
 
     }
+
+    public void Direction(float x, float z)
+    {
+        velocity = new Vector3(x * speed * Time.deltaTime, velocity.y, z * speed * Time.deltaTime);
+    }
+
 }
