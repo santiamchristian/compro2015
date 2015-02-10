@@ -5,6 +5,7 @@ public class InputController : MonoBehaviour
 {
     public MovementController[] players;
 
+
     void Start()
     {
         players = gameObject.GetComponentsInChildren<MovementController>();
@@ -14,8 +15,32 @@ public class InputController : MonoBehaviour
     {
         if (players[0] != null)
         {
-            players[0].Move(new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")));
+            players[0].Direction(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
             if (Input.GetButton("Jump")) players[0].Jump();
+            PopUpMenu("Cancel");
         }
     }
+
+    protected void PopUpMenu(string buttonName)
+    {
+        if (Input.GetButtonUp(buttonName))
+        {
+            GameObject popUpMenu = GameObject.Find("PopUpMenu");
+
+            if (popUpMenu == null)
+            {
+
+                Application.LoadLevelAdditive("PopUpMenu");
+
+            }
+            else
+            {
+
+                Destroy(popUpMenu);
+            }
+        }
+
+    }
+
+
 }
