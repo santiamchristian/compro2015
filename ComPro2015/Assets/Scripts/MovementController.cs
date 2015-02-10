@@ -24,13 +24,13 @@ public class MovementController : MonoBehaviour
     private void Fall()
     {
         if(! controller.isGrounded)
-        velocity.y -= gravity * Time.deltaTime;
+        velocity.y -= gravity;
     }
     private void Move()
-    {   if (controller.isGrounded)
-        {
-            controller.Move(velocity);
-        }
+    {   
+        
+        controller.Move(velocity* Time.deltaTime);
+        
     }
 
     public void Jump()
@@ -45,7 +45,7 @@ public class MovementController : MonoBehaviour
 
     public void Direction(float x, float z)
     {
-        velocity = new Vector3(x * speed * Time.deltaTime, velocity.y, z * speed * Time.deltaTime);
+        velocity = new Vector3(x * speed, velocity.y, z * speed);
     }
 
 }
