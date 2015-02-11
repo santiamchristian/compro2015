@@ -18,6 +18,16 @@ public class InputController : MonoBehaviour
             players[0].Direction(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
             if (Input.GetButton("Jump")) players[0].Jump();
             PopUpMenu("Cancel");
+            Attack("Fire1");
+        }
+    }
+
+    protected void Attack(string buttonName)
+    {
+        if (Input.GetButton(buttonName))
+        {
+            Ability ability = players[0].GetComponentInChildren<Ability>();
+            ability.Use();
         }
     }
 
