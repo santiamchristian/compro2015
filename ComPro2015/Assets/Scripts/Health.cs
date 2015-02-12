@@ -5,6 +5,7 @@ public class Health : MonoBehaviour
 {
     public int hp = 100;
     public bool isEnemy = true;
+    private int playerIndex;
 
     // Use this for initialization
     public void Damage(int damageCount)
@@ -19,7 +20,7 @@ public class Health : MonoBehaviour
 
     void Start()
     {
-
+        playerIndex = transform.GetComponent<Player>().playerIndex;
     }
 
     // Update is called once per frame
@@ -30,7 +31,9 @@ public class Health : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Damage(1);
+        Projectile projectile = other.GetComponent<Projectile>();
+        if (projectile.shooterIndex != playerIndex)
+            Damage(projectile.damage);
     }
 
 
