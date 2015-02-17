@@ -5,23 +5,28 @@ public class Ability : MonoBehaviour {
     public Transform projectile;
     private int playerIndex;
     private GameObject projectiles;
+    private float ElapsedTime;
+    public float coolDown = 1;
 
-	// Use this for initialization
     void Start()
     {
         playerIndex = transform.parent.GetComponent<Player>().playerIndex;
         projectiles = GameObject.Find("Projectiles");
     }
-	// Update is called once per frame
 	void Update () 
     {
-	
+        ElapsedTime += Time.deltaTime;
 	}
 
     public void Use()
     {
-        Transform newProjectile = Instantiate(projectile, transform.position, transform.rotation) as Transform;
-        newProjectile.GetComponent<Projectile>().shooterIndex = playerIndex;
-        newProjectile.transform.parent = projectiles.transform;
+        if (coolDown <= ElapsedTime)
+        {
+
+            Transform newProjectile = Instantiate(projectile, transform.position, transform.rotation) as Transform;
+            newProjectile.GetComponent<Projectile>().shooterIndex = playerIndex;
+            newProjectile.transform.parent = projectiles.transform;
+            ElapsedTime = 0;
+        }
     }
 }
