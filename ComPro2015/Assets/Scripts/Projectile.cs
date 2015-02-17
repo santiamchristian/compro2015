@@ -4,6 +4,8 @@ using System.Collections;
 public class Projectile : MonoBehaviour 
 {
     public int speed;
+    public int shooterIndex;
+    public int damage;
 
 	// Use this for initialization
 	void Start () 
