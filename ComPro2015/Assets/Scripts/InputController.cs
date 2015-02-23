@@ -18,17 +18,23 @@ public class InputController : MonoBehaviour
             players[0].Direction(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
             if (Input.GetButton("Jump")) players[0].Jump();
             PopUpMenu("Cancel");
-            Attack("Fire1");
+            Attack(0);
         }
+
+        for (int i = 0; i <= players.Length; i++)
+        { 
+            if (GamepadInput.GamePad.GetTrigger(GamepadInput.GamePad.Trigger.RightTrigger, (GamepadInput.GamePad.Index)i+1) > 0)
+            {
+                Attack(i);
+            }
+        }
+
     }
 
-    protected void Attack(string buttonName)
+    protected void Attack(int index)
     {
-        if (Input.GetButton(buttonName))
-        {
-            Ability ability = players[0].GetComponentInChildren<Ability>();
+            Ability ability = players[index].GetComponentInChildren<Ability>();
             ability.Use();
-        }
     }
 
     protected void PopUpMenu(string buttonName)
