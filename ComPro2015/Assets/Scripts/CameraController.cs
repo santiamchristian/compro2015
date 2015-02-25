@@ -3,7 +3,8 @@ using System.Collections;
 
 public class CameraController : MonoBehaviour
 {
-    public GameObject players;
+    public Transform[] players;
+    public GameObject playerContainer;
     public float slerp = 5;
     private Vector3 lookAtPoint;
     private Vector3 localForwardVector;
@@ -11,12 +12,14 @@ public class CameraController : MonoBehaviour
     public float maximumDistance;
     public float minimumDistance;
     public Transform cameraTransform;
+    private Transform center;
 
     void Start()
     {
         localForwardVector = cameraTransform.forward;
         distance = Mathf.Clamp(-cameraTransform.localPosition.z / cameraTransform.forward.z, minimumDistance, maximumDistance);
         lookAtPoint = cameraTransform.localPosition + localForwardVector * distance;
+        
     }
 
     void LateUpdate()
@@ -28,7 +31,7 @@ public class CameraController : MonoBehaviour
 
     void UpdatePosition()
     {
-        transform.position = Vector3.Slerp(transform.position, players.transform.position, slerp * Time.deltaTime);
+        transform.position = Vector3.Slerp(transform.position, center.position, slerp * Time.deltaTime);
     }
     void UpdateZoom()
     {
@@ -37,5 +40,10 @@ public class CameraController : MonoBehaviour
     void UpdateDistance()
     {
         distance = Mathf.Clamp(distance, minimumDistance, maximumDistance);
+    }
+
+    void UpdateCenter()
+    {
+
     }
 }
