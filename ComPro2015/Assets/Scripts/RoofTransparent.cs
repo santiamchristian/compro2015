@@ -3,7 +3,8 @@ using System.Collections;
 
 public class RoofTransparent : MonoBehaviour {
 
-
+    public GameObject[] meshsToHide;
+    
 	// Use this for initialization
 	void Start () {
 	
@@ -16,10 +17,10 @@ public class RoofTransparent : MonoBehaviour {
 
     void OnTriggerStay(Collider other)
     {
-  
-       if (other.gameObject.name == "Player" && renderer.enabled)
+    foreach(GameObject mesh in meshsToHide)
+       if (other.gameObject.name == "Player" && mesh.renderer.enabled)
         {
-            renderer.enabled = false; 
+            mesh.renderer.enabled = false; 
         }
 
 
@@ -27,10 +28,12 @@ public class RoofTransparent : MonoBehaviour {
 
     void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.name == "Player" && !renderer.enabled)
+        foreach(GameObject mesh in meshsToHide)
+        if (other.gameObject.name == "Player" && !mesh.renderer.enabled)
         {
-            renderer.enabled = true;
+            mesh.renderer.enabled = true;
         }
     }
 
+   
 }
