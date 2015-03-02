@@ -214,7 +214,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1848996fcf7ec25428e815e1715bc3c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  players: []
   playerContainer: {fileID: 1816695582}
   slerp: 5
   maximumDistance: 200
