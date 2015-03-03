@@ -15,19 +15,26 @@ public class InputController : MonoBehaviour
     {
         if (players[0] != null)
         {
-            players[0].Direction(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+            players[0].Direction(new Vector2 (Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")));
             if (Input.GetButton("Jump")) players[0].Jump();
             PopUpMenu("Cancel");
             if(Input.GetButtonDown("Fire1")) Attack(0);
             players[0].RotateTowardsCursor();
         }
 
-        for (int i = 0; i <= players.Length; i++)
+        for (int i = 0; i < players.Length; i++)
         { 
             if (GamepadInput.GamePad.GetTrigger(GamepadInput.GamePad.Trigger.RightTrigger, (GamepadInput.GamePad.Index)i+1) > 0)
             {
                 Attack(i);
             }
+
+            players[i].Direction(GamepadInput.GamePad.GetAxis(GamepadInput.GamePad.Axis.LeftStick, (GamepadInput.GamePad.Index)i + 1));
+            if (GamepadInput.GamePad.GetButton(GamepadInput.GamePad.Button.A, (GamepadInput.GamePad.Index)i + 1))
+            {
+                players[i].Jump();
+            }
+            players[i].Rotate(GamepadInput.GamePad.GetAxis(GamepadInput.GamePad.Axis.RightStick, (GamepadInput.GamePad.Index)i + 1));
         }
 
     }
