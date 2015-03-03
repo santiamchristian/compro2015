@@ -19,7 +19,7 @@ public class Projectile : MonoBehaviour
 	void Update () 
     {
         elapsedTime += Time.deltaTime;
-        rigidbody.velocity = transform.InverseTransformDirection(Vector3.forward) * speed;
+        rigidbody.velocity =  transform.TransformDirection(Vector3.forward) * speed;
         if (elapsedTime >= duration)
             Destroy();
 	}
