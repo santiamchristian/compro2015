@@ -43,9 +43,14 @@ public class MovementController : MonoBehaviour
 
     }
 
-    public void Direction(float x, float z)
+    public void Direction(Vector2 direction)
     {
-        velocity = new Vector3(x * speed, velocity.y, z * speed);
+        velocity = new Vector3(direction.x * speed, velocity.y, direction.y * speed);
+    }
+
+    public void Rotate(Vector2 rotation)
+    {
+        transform.rotation = new Quaternion(rotation.x, transform.rotation.y, rotation.y, transform.rotation.w);
     }
 
     public void RotateTowardsCursor()
