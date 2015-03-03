@@ -9,6 +9,7 @@ public class MovementController : MonoBehaviour
     private Vector3 moveDirection = Vector3.zero;
     private Vector3 velocity = Vector3.zero;
     private CharacterController controller;
+    public float rotationSpeed = 20f;
 
     public void Start()
     {
@@ -50,7 +51,11 @@ public class MovementController : MonoBehaviour
 
     public void Rotate(Vector2 rotation)
     {
-        transform.rotation = new Quaternion(rotation.x, transform.rotation.y, rotation.y, transform.rotation.w);
+        if (rotation.x != 0 || rotation.y != 0)
+        {
+            Quaternion targetRotation = Quaternion.Euler(0.0f, Mathf.Atan2(rotation.x, rotation.y) * Mathf.Rad2Deg, 0.0f);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+        }
     }
 
     public void RotateTowardsCursor()
