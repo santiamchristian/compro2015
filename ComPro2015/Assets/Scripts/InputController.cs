@@ -22,7 +22,7 @@ public class InputController : MonoBehaviour
             players[0].RotateTowardsCursor();
         }
 
-        for (int i = 0; i <= players.Length; i++)
+        for (int i = 0; i < players.Length; i++)
         { 
             if (GamepadInput.GamePad.GetTrigger(GamepadInput.GamePad.Trigger.RightTrigger, (GamepadInput.GamePad.Index)i+1) > 0)
             {
