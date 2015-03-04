@@ -75,10 +75,10 @@ public class MovementController : MonoBehaviour
             Vector3 targetPoint = ray.GetPoint(hitdist);
 
             // Determine the target rotation.  This is the rotation if the transform looks at the target point.
-            Quaternion targetRotation = Quaternion.LookRotation(targetPoint - transform.position);
+            Quaternion targetRotation =  Quaternion.LookRotation(targetPoint - transform.position);
 
             // Smoothly rotate towards the target point.
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, speed * Time.deltaTime); // WITH SPEED
+            transform.rotation = Quaternion.Slerp(transform.rotation, new Quaternion(0, targetRotation.y, 0, targetRotation.w), speed * Time.deltaTime); // WITH SPEED
             //transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 1); // WITHOUT SPEED!!!
         }
             
