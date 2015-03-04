@@ -18,7 +18,7 @@ public class InputController : MonoBehaviour
             if (Input.GetButton("Jump")) players[0].Jump();
             PopUpMenu("Cancel");
             if(Input.GetButtonDown("Fire1")) Attack(0);
-            players[0].RotateTowardsCursor();
+            //players[0].RotateTowardsCursor();
         }
 
         for (int i = 0; i < players.Length; i++)
