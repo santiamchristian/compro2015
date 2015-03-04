@@ -28,7 +28,7 @@ public class InputController : MonoBehaviour
                 Attack(i);
             }
 
-            if(i == 0 && Input.GetAxis("Horizontal") > 0 || Input.GetAxis("Vertical") != 0)
+            if(i == 0 && (Mathf.Abs(Input.GetAxis("Horizontal")) > 0 || Mathf.Abs(Input.GetAxis("Vertical")) > 0))
                 players[0].Direction(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")));
             else
                 players[i].Direction(GamepadInput.GamePad.GetAxis(GamepadInput.GamePad.Axis.LeftStick, (GamepadInput.GamePad.Index)i + 1));
