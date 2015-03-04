@@ -72,7 +72,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   shooterIndex: 0
-  damage: 0
+  damage: 100
   duration: 4
 --- !u!198 &19865962
 ParticleSystem:
