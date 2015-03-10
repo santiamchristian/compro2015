@@ -5,10 +5,12 @@ public class InputController : MonoBehaviour
 {
     public MovementController[] players;
     public bool keyboard;
+    public Transform playerPrefab;
+    public int maxPlayers;
 
     void Start()
     {
-        players = gameObject.GetComponentsInChildren<MovementController>();
+        players = new MovementController[maxPlayers];
     }
 
     void Update()
@@ -22,22 +24,26 @@ public class InputController : MonoBehaviour
             players[0].Direction(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")));
         }
 
-        for (int i = 0; i < players.Length; i++)
+        for (int i = 1; i <= maxPlayers; i++)
         {
-            if (keyboard)
-                i++;
-            if (GamepadInput.GamePad.GetTrigger(GamepadInput.GamePad.Trigger.RightTrigger, (GamepadInput.GamePad.Index)i+1) > 0)
+            if (players[i - 1] != null)
             {
-                Attack(i);
-            }
 
-            players[i].Direction(GamepadInput.GamePad.GetAxis(GamepadInput.GamePad.Axis.LeftStick, (GamepadInput.GamePad.Index)i + 1));
+                if (keyboard)
+                    i++;
+                if (GamepadInput.GamePad.GetTrigger(GamepadInput.GamePad.Trigger.RightTrigger, (GamepadInput.GamePad.Index)i) > 0)
+                {
+                    Attack(i);
+                }
 
-            if (GamepadInput.GamePad.GetButton(GamepadInput.GamePad.Button.A, (GamepadInput.GamePad.Index)i + 1))
-            {
-                players[i].Jump();
+                players[i].Direction(GamepadInput.GamePad.GetAxis(GamepadInput.GamePad.Axis.LeftStick, (GamepadInput.GamePad.Index)i));
+
+                if (GamepadInput.GamePad.GetButton(GamepadInput.GamePad.Button.A, (GamepadInput.GamePad.Index)i))
+                {
+                    players[i].Jump();
+                }
+                players[i].Rotate(GamepadInput.GamePad.GetAxis(GamepadInput.GamePad.Axis.RightStick, (GamepadInput.GamePad.Index)i));
             }
-            players[i].Rotate(GamepadInput.GamePad.GetAxis(GamepadInput.GamePad.Axis.RightStick, (GamepadInput.GamePad.Index)i + 1));
         }
 
     }
@@ -67,6 +73,11 @@ public class InputController : MonoBehaviour
             }
         }
 
+    }
+    protected void AddPlayer(int index)
+    {
+        Transform newPlayer = Instantiate(playerPrefab, transform.position, Quaternion.identity) as Transform;
+        newPlayer.parent = transform;
     }
 
 
