@@ -46,7 +46,7 @@ public class InputController : MonoBehaviour
             }
             else
             {
-                if (GamepadInput.GamePad.GetButton(GamepadInput.GamePad.Button.Start, (GamepadInput.GamePad.Index)i))
+                if (GamepadInput.GamePad.GetButtonUp(GamepadInput.GamePad.Button.Start, (GamepadInput.GamePad.Index)i))
                 {
                     AddPlayer(i - 1);
                 }
@@ -85,6 +85,8 @@ public class InputController : MonoBehaviour
     {
         Transform newPlayer = Instantiate(playerPrefab, transform.position, Quaternion.identity) as Transform;
         newPlayer.parent = transform;
+        newPlayer.GetComponent<Player>().playerIndex = index;
+        players[index] = newPlayer.GetComponent<MovementController>();
     }
 
 
