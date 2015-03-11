@@ -44,6 +44,13 @@ public class InputController : MonoBehaviour
                 }
                 players[i].Rotate(GamepadInput.GamePad.GetAxis(GamepadInput.GamePad.Axis.RightStick, (GamepadInput.GamePad.Index)i));
             }
+            else
+            {
+                if (GamepadInput.GamePad.GetButtonUp(GamepadInput.GamePad.Button.Start, (GamepadInput.GamePad.Index)i))
+                {
+                    AddPlayer(i - 1);
+                }
+            }
         }
 
     }
@@ -78,6 +85,8 @@ public class InputController : MonoBehaviour
     {
         Transform newPlayer = Instantiate(playerPrefab, transform.position, Quaternion.identity) as Transform;
         newPlayer.parent = transform;
+        newPlayer.GetComponent<Player>().playerIndex = index;
+        players[index] = newPlayer.GetComponent<MovementController>();
     }
 
 
