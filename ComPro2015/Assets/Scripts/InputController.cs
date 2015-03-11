@@ -4,51 +4,57 @@ using System.Collections;
 public class InputController : MonoBehaviour
 {
     public MovementController[] players;
-    public bool keyboard;
     public Transform playerPrefab;
-    public int maxPlayers;
+    public bool asManyPlayersAsControllers = true;
+    public int maxPlayers = 5;
 
     void Start()
     {
+        if(asManyPlayersAsControllers)
+            if (Input.GetJoystickNames().Length > maxPlayers)
+                maxPlayers = Input.GetJoystickNames().Length + 1;
         players = new MovementController[maxPlayers];
     }
 
     void Update()
     {
-        if (keyboard && players[0] != null)
+        if (players[maxPlayers - 1] != null)
         {
-            if (Input.GetButton("Jump")) players[0].Jump();
+            if (Input.GetButton("Jump")) players[maxPlayers - 1].Jump();
             PopUpMenu("Cancel");
-            if(Input.GetButtonDown("Fire1")) Attack(0);
-            players[0].RotateTowardsCursor();
-            players[0].Direction(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")));
+            if (Input.GetButtonDown("Fire1")) Attack(maxPlayers - 1);
+            players[maxPlayers - 1].RotateTowardsCursor();
+            players[maxPlayers - 1].Direction(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")));
+        }
+        else
+        {
+            if(Input.GetButtonUp("Cancel")) 
+                AddPlayer(maxPlayers - 1);
         }
 
-        for (int i = 1; i <= maxPlayers; i++)
+        for (int i = 0; i < maxPlayers - 1; i++)
         {
-            if (players[i - 1] != null)
+            GamepadInput.GamePad.Index gamePadIndex = (GamepadInput.GamePad.Index)(i + 1);
+            if (players[i] != null)
             {
-
-                if (keyboard)
-                    i++;
-                if (GamepadInput.GamePad.GetTrigger(GamepadInput.GamePad.Trigger.RightTrigger, (GamepadInput.GamePad.Index)i) > 0)
+                if (GamepadInput.GamePad.GetTrigger(GamepadInput.GamePad.Trigger.RightTrigger, gamePadIndex) > 0)
                 {
                     Attack(i);
                 }
 
-                players[i].Direction(GamepadInput.GamePad.GetAxis(GamepadInput.GamePad.Axis.LeftStick, (GamepadInput.GamePad.Index)i));
+                players[i].Direction(GamepadInput.GamePad.GetAxis(GamepadInput.GamePad.Axis.LeftStick, gamePadIndex));
 
-                if (GamepadInput.GamePad.GetButton(GamepadInput.GamePad.Button.A, (GamepadInput.GamePad.Index)i))
+                if (GamepadInput.GamePad.GetButton(GamepadInput.GamePad.Button.A, gamePadIndex))
                 {
                     players[i].Jump();
                 }
-                players[i].Rotate(GamepadInput.GamePad.GetAxis(GamepadInput.GamePad.Axis.RightStick, (GamepadInput.GamePad.Index)i));
+                players[i].Rotate(GamepadInput.GamePad.GetAxis(GamepadInput.GamePad.Axis.RightStick, gamePadIndex));
             }
             else
             {
-                if (GamepadInput.GamePad.GetButtonUp(GamepadInput.GamePad.Button.Start, (GamepadInput.GamePad.Index)i))
+                if (GamepadInput.GamePad.GetButtonUp(GamepadInput.GamePad.Button.Start, gamePadIndex))
                 {
-                    AddPlayer(i - 1);
+                    AddPlayer(i);
                 }
             }
         }

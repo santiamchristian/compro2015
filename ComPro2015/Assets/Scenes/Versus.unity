@@ -271,9 +271,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   players: []
-  keyboard: 1
   playerPrefab: {fileID: 488722, guid: 1dd77bed521d8a14084300c91cb742b0, type: 2}
-  maxPlayers: 4
+  asManyPlayersAsControllers: 1
+  maxPlayers: 5
 --- !u!114 &1816695585
 MonoBehaviour:
   m_ObjectHideFlags: 0
