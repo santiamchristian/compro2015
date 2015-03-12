@@ -49,9 +49,11 @@ public class CameraController : MonoBehaviour
         foreach (Transform child in playerContainer.transform)
         {
             positions += child.position;
-
         }
 
-        center = positions / playerContainer.transform.childCount;
+        if (playerContainer.transform.childCount > 0)
+            center = positions / playerContainer.transform.childCount;
+        else
+            center = playerContainer.transform.position;
     }
 }
