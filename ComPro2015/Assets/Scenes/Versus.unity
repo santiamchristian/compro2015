@@ -272,7 +272,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   players: []
   playerPrefab: {fileID: 488722, guid: 1dd77bed521d8a14084300c91cb742b0, type: 2}
-  asManyPlayersAsControllers: 1
+  asManyPlayersAsControllers: 0
   maxPlayers: 5
 --- !u!114 &1816695585
 MonoBehaviour:

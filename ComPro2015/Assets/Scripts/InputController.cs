@@ -32,27 +32,26 @@ public class InputController : MonoBehaviour
                 AddPlayer(maxPlayers - 1);
         }
 
-        for (int i = 0; i < maxPlayers - 1; i++)
+        for (int i = 0; i < (maxPlayers - 1); i++)
         {
-            GamepadInput.GamePad.Index gamePadIndex = (GamepadInput.GamePad.Index)(i + 1);
+            GamepadInput.GamepadState gamePad = GamepadInput.GamePad.GetState((GamepadInput.GamePad.Index)(i + 1));
             if (players[i] != null)
-            {
-                if (GamepadInput.GamePad.GetTrigger(GamepadInput.GamePad.Trigger.RightTrigger, gamePadIndex) > 0)
-                {
-                    Attack(i);
-                }
+            {                
+                players[i].Direction(gamePad.LeftStickAxis);
 
-                players[i].Direction(GamepadInput.GamePad.GetAxis(GamepadInput.GamePad.Axis.LeftStick, gamePadIndex));
-
-                if (GamepadInput.GamePad.GetButton(GamepadInput.GamePad.Button.A, gamePadIndex))
+                if (gamePad.A)
                 {
                     players[i].Jump();
                 }
-                players[i].Rotate(GamepadInput.GamePad.GetAxis(GamepadInput.GamePad.Axis.RightStick, gamePadIndex));
+                players[i].Rotate(gamePad.rightStickAxis);
+                if (gamePad.RightTrigger > 0)
+                {
+                    Attack(i);
+                }
             }
             else
             {
-                if (GamepadInput.GamePad.GetButtonUp(GamepadInput.GamePad.Button.Start, gamePadIndex))
+                if (gamePad.Start)
                 {
                     AddPlayer(i);
                 }
