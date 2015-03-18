@@ -74,6 +74,7 @@ MonoBehaviour:
   shooterIndex: 0
   damage: 100
   duration: 4
+  distanceFromGround: 1
 --- !u!198 &19865962
 ParticleSystem:
   m_ObjectHideFlags: 1
