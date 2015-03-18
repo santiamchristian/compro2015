@@ -20,11 +20,8 @@ public class PlayerGui : MonoBehaviour {
         previousPlayerCount = playerContainer.transform.childCount;
 	}
 
-    void playerGui()
+    void playerGui(int index)
     {
-        if (transform.childCount > previousPlayerCount)
-        {
-             
-        }
+       //guiPositions[index] = Instantiate()
     }
 }
