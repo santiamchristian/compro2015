@@ -8,13 +8,14 @@ public class Projectile : MonoBehaviour
     public int damage;
     public float duration = 30;
     public float distanceFromGround = 1f;
+    public float dropSpeed;
     private float elapsedTime;
 
 
     // Use this for initialization
     void Start()
     {
-
+        distanceFromGround = transform.position.y;
     }
 
     // Update is called once per frame
@@ -49,7 +50,7 @@ public class Projectile : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit))
             if (hit.transform.tag == "Terrain")
-                transform.position = new Vector3(transform.position.x, transform.position.y - (hit.distance - distanceFromGround), transform.position.z);
+                transform.position =Vector3.Slerp(transform.position, new Vector3 (transform.position.x, transform.position.y - (hit.distance - distanceFromGround), transform.position.z), dropSpeed);
 
     }
 }
