@@ -17,12 +17,15 @@ public class Tornado : Projectile {
 
     public override void OnTriggerEnter(Collider other)
     {
-        base.OnTriggerEnter(other);
-        if (other.gameObject.name == "Player")
-        {
+        Health health = other.GetComponent<Health>();
+        if (health == null)
+            Destroy();
 
-            other.gameObject.GetComponent<MovementController>().Launch(10);
+        if (other.gameObject.tag == "Player")
+        {
+            other.gameObject.GetComponent<MovementController>().Launch(LaunchDistance);
         }
+        
     }
 
     void Suction()
