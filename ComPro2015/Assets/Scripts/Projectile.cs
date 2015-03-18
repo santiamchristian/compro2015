@@ -28,7 +28,7 @@ public class Projectile : MonoBehaviour
         Destroy(gameObject);
     }
 
-    void OnTriggerEnter(Collider other)
+    public virtual void OnTriggerEnter(Collider other)
     {
         Health health = other.GetComponent<Health>();
         if (health == null)
