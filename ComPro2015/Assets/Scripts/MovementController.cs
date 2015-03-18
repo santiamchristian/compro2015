@@ -34,6 +34,11 @@ public class MovementController : MonoBehaviour
         
     }
 
+    public void Launch(float distanceToLaunch)
+    {
+        velocity.y = distanceToLaunch;
+    }
+
     public void Jump()
     {
         if (controller.isGrounded)
