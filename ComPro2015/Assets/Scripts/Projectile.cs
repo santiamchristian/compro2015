@@ -7,7 +7,9 @@ public class Projectile : MonoBehaviour
     public int shooterIndex;
     public int damage;
     public float duration = 30;
+    public float distanceFromGround = 1f;
     private float elapsedTime;
+
 
     // Use this for initialization
     void Start()
@@ -20,6 +22,7 @@ public class Projectile : MonoBehaviour
     {
         elapsedTime += Time.deltaTime;
         rigidbody.velocity = transform.TransformDirection(Vector3.forward) * speed;
+        Move();
         if (elapsedTime >= duration)
             Destroy();
     }
@@ -38,6 +41,15 @@ public class Projectile : MonoBehaviour
             health.Damage(damage);
             Destroy();
         }
+
+    }
+    void Move()
+    {
+        Ray ray = new Ray(transform.position, transform.TransformDirection(Vector3.down));
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit))
+            if (hit.transform.tag == "Terrain")
+                transform.position = new Vector3(transform.position.x, transform.position.y - (hit.distance - distanceFromGround), transform.position.z);
 
     }
 }

@@ -18,7 +18,7 @@ public class RoofTransparent : MonoBehaviour {
     void OnTriggerStay(Collider other)
     {
     foreach(GameObject mesh in meshsToHide)
-       if (other.gameObject.name == "Player" && mesh.renderer.enabled)
+       if (other.gameObject.tag  == "Player" && mesh.renderer.enabled)
         {
             mesh.renderer.enabled = false; 
         }
@@ -29,7 +29,7 @@ public class RoofTransparent : MonoBehaviour {
     void OnTriggerExit(Collider other)
     {
         foreach(GameObject mesh in meshsToHide)
-        if (other.gameObject.name == "Player" && !mesh.renderer.enabled)
+        if (other.gameObject.tag == "Player" && !mesh.renderer.enabled)
         {
             mesh.renderer.enabled = true;
         }
