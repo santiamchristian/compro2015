@@ -3567,6 +3567,8 @@ MonoBehaviour:
   shooterIndex: 0
   damage: 0
   duration: 30
+  distanceFromGround: 1
+  dropSpeed: 0
 --- !u!54 &441147359
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3676,8 +3678,8 @@ GameObject:
   - 4: {fileID: 488952068}
   - 198: {fileID: 488952067}
   - 199: {fileID: 488952066}
-  - 136: {fileID: 488952069}
   - 114: {fileID: 488952070}
+  - 65: {fileID: 488952069}
   m_Layer: 0
   m_Name: Tornado
   m_TagString: Untagged
@@ -4771,8 +4773,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
---- !u!136 &488952069
-CapsuleCollider:
+--- !u!65 &488952069
+BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -4780,10 +4782,9 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 2.23000002
-  m_Height: 9.19508362
-  m_Direction: 2
-  m_Center: {x: 0, y: 0, z: 4.17000008}
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2, z: 11.8832035}
+  m_Center: {x: 0, y: 0, z: 5.23160172}
 --- !u!114 &488952070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4799,7 +4800,9 @@ MonoBehaviour:
   shooterIndex: 0
   damage: 0
   duration: 30
-  LaunchDistance: 10
+  distanceFromGround: .5
+  dropSpeed: 0
+  LaunchDistance: 600
 --- !u!1 &507537281
 GameObject:
   m_ObjectHideFlags: 0
@@ -15107,6 +15110,8 @@ MonoBehaviour:
   shooterIndex: 0
   damage: 100
   duration: 4
+  distanceFromGround: 1
+  dropSpeed: 10
 --- !u!54 &1070004666
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -17721,6 +17726,8 @@ MonoBehaviour:
   shooterIndex: 0
   damage: 100
   duration: 4
+  distanceFromGround: 1
+  dropSpeed: 10
 --- !u!43 &1433050806
 Mesh:
   m_ObjectHideFlags: 0
@@ -18043,6 +18050,8 @@ MonoBehaviour:
   shooterIndex: 0
   damage: 100
   duration: 4
+  distanceFromGround: 1
+  dropSpeed: 10
 --- !u!54 &1731290439
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -20532,6 +20541,8 @@ MonoBehaviour:
   shooterIndex: 0
   damage: 20
   duration: 5
+  distanceFromGround: 1
+  dropSpeed: 0
 --- !u!95 &2014566419
 Animator:
   serializedVersion: 3

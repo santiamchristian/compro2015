@@ -15,7 +15,6 @@ public class Projectile : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        distanceFromGround = transform.position.y;
     }
 
     // Update is called once per frame
