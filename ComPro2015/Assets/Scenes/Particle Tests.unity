@@ -4783,8 +4783,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 11.8832035}
-  m_Center: {x: 0, y: 0, z: 5.23160172}
+  m_Size: {x: 2, y: 2, z: 10.5975075}
+  m_Center: {x: 0, y: -5.4702457e-07, z: 4.58877516}
 --- !u!114 &488952070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4802,7 +4802,7 @@ MonoBehaviour:
   duration: 30
   distanceFromGround: .5
   dropSpeed: 0
-  LaunchDistance: 600
+  LaunchDistance: 60
 --- !u!1 &507537281
 GameObject:
   m_ObjectHideFlags: 0
