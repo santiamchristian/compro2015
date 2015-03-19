@@ -7,6 +7,7 @@ public class InputController : MonoBehaviour
     public Transform playerPrefab;
     public bool asManyPlayersAsControllers = true;
     public int maxPlayers = 5;
+    public PlayerGui playerGui;
 
     void Start()
     {
@@ -92,6 +93,7 @@ public class InputController : MonoBehaviour
         newPlayer.parent = transform;
         newPlayer.GetComponent<Player>().playerIndex = index;
         players[index] = newPlayer.GetComponent<MovementController>();
+        playerGui.AddPlayer(index, ElementEnum.Fire);
     }
 
 

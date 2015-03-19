@@ -712,6 +712,11 @@ MonoBehaviour:
   - {fileID: 837884493}
   - {fileID: 175823361}
   - {fileID: 1312846682}
+  guiPrefabs:
+  - {fileID: 22441006, guid: 8c7db559455ceca43ab5c905c7368c79, type: 2}
+  - {fileID: 22424240, guid: a5feafab185d23548bcf041875a24c6b, type: 2}
+  - {fileID: 22430742, guid: 4fe278a7679146e449dcc59840340738, type: 2}
+  - {fileID: 22420568, guid: 42994507791f2e74e90db92bb77ef05c, type: 2}
 --- !u!1 &1816695582
 GameObject:
   m_ObjectHideFlags: 0
@@ -756,6 +761,7 @@ MonoBehaviour:
   playerPrefab: {fileID: 488722, guid: 1dd77bed521d8a14084300c91cb742b0, type: 2}
   asManyPlayersAsControllers: 0
   maxPlayers: 5
+  playerGui: {fileID: 1580669362}
 --- !u!114 &1816695585
 MonoBehaviour:
   m_ObjectHideFlags: 0

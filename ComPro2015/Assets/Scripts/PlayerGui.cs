@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
+
 public class PlayerGui : MonoBehaviour {
 
     public Transform playerContainer;
     public RectTransform[] guiPositions = new RectTransform[5];
     private int previousPlayerCount =0  ;
-
+    public RectTransform[] guiPrefabs = new RectTransform[4];
 
 	// Use this for initialization
 	void Start () 
@@ -20,8 +22,11 @@ public class PlayerGui : MonoBehaviour {
         previousPlayerCount = playerContainer.transform.childCount;
 	}
 
-    void playerGui(int index)
+   public void AddPlayer(int index, ElementEnum element)
     {
-       //guiPositions[index] = Instantiate()
+
+        RectTransform newGui = Instantiate(guiPrefabs[(int)element]) as RectTransform;
+        newGui.position = guiPositions[index].position;
+        newGui.parent = guiPositions[index];
     }
 }
