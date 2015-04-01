@@ -29,8 +29,8 @@ public class InputController : MonoBehaviour
         }
         else
         {
-            if(Input.GetButtonUp("Cancel")) 
-                AddPlayer(maxPlayers - 1);
+            //if(Input.GetButtonUp("Cancel")) 
+                //AddPlayer(maxPlayers - 1);
         }
 
         for (int i = 0; i < (maxPlayers - 1); i++)
@@ -54,7 +54,7 @@ public class InputController : MonoBehaviour
             {
                 if (gamePad.Start)
                 {
-                    AddPlayer(i);
+                    //AddPlayer(i);
                 }
             }
         }
@@ -87,14 +87,7 @@ public class InputController : MonoBehaviour
         }
 
     }
-    protected void AddPlayer(int index)
-    {
-        Transform newPlayer = Instantiate(playerPrefab, transform.position, Quaternion.identity) as Transform;
-        newPlayer.parent = transform;
-        newPlayer.GetComponent<Player>().playerIndex = index;
-        players[index] = newPlayer.GetComponent<MovementController>();
-        playerGui.AddPlayer(index, ElementEnum.Fire);
-    }
+ 
 
 
 
