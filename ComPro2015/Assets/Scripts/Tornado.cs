@@ -21,7 +21,7 @@ public class Tornado : Projectile {
         if (health == null)
             Destroy();
 
-        health.Damage.
+        
         if (other.gameObject.tag == "Player")
         {
             other.gameObject.GetComponent<MovementController>().Launch(LaunchDistance);
