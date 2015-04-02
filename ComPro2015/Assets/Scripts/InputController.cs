@@ -8,6 +8,8 @@ public class InputController : MonoBehaviour
     public bool asManyPlayersAsControllers = true;
     public int maxPlayers = 5;
     public PlayerGui playerGui;
+    public Transform charatorCreatorPrefab;
+    Transform charactorCreatorMenu;
 
     void Start()
     {
@@ -29,8 +31,11 @@ public class InputController : MonoBehaviour
         }
         else
         {
-            //if(Input.GetButtonUp("Cancel")) 
-                //AddPlayer(maxPlayers - 1);
+            if (Input.GetButtonUp("Cancel"))
+            {
+                CharacterCreatorMenu(maxPlayers - 1);
+            }
+                
         }
 
         for (int i = 0; i < (maxPlayers - 1); i++)
@@ -54,7 +59,7 @@ public class InputController : MonoBehaviour
             {
                 if (gamePad.Start)
                 {
-                    //AddPlayer(i);
+                    CharacterCreatorMenu(i);
                 }
             }
         }
@@ -65,6 +70,14 @@ public class InputController : MonoBehaviour
     {
             Ability ability = players[index].GetComponentInChildren<Ability>();
             ability.Use();
+    }
+
+    protected void CharacterCreatorMenu(int index)
+    {
+        if (charactorCreatorMenu == null) { 
+            charactorCreatorMenu = Instantiate(charatorCreatorPrefab) as Transform;
+            charactorCreatorMenu.GetComponent<PlayerCreator>().index = index;
+        }
     }
 
     protected void PopUpMenu(string buttonName)

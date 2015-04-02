@@ -4,8 +4,8 @@ using System.Collections;
 public class PlayerCreator : MonoBehaviour {
 
     public Transform[] playerPrefabs = new Transform[4];
-    public PlayerGui playerGui;
-
+    public int index;
+   
 	// Use this for initialization
 	void Start () 
     {
@@ -18,7 +18,7 @@ public class PlayerCreator : MonoBehaviour {
 	
 	}
 
-    public void AddPlayer(MovementController[] players, int index, ElementEnum type)
+    public void AddPlayer(MovementController[] players, ElementEnum type, PlayerGui playerGui)
     {
         Transform newPlayer = Instantiate(playerPrefabs[(int)type], transform.position, Quaternion.identity) as Transform;
         newPlayer.parent = transform;
