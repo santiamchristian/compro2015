@@ -100,6 +100,15 @@ public class InputController : MonoBehaviour
         }
 
     }
+
+    public void AddPlayerToInput(int type, int index)
+    {
+        //Transform newPlayer = Instantiate(playerGuiPrefabs[type], transform.position, Quaternion.identity) as Transform;
+        //newPlayer.parent = transform;
+        //newPlayer.GetComponent<Player>().playerIndex = index;
+        //players[index] = newPlayer.GetComponent<MovementController>();
+        //playerGui.AddPlayer(index, (ElementEnum)type);
+    }
  
 
 
