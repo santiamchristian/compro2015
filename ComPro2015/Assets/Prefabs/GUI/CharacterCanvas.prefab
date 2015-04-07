@@ -175,6 +175,7 @@ MonoBehaviour:
   - {fileID: 488722, guid: c92379587d04b384eb7fe0e20fa09664, type: 2}
   - {fileID: 488722, guid: aeea5168024993842bd5aacaf839aa66, type: 2}
   - {fileID: 488722, guid: 13cfdcb03720f5847aa01cd9b7c6a86c, type: 2}
+  playerGui: {fileID: 0}
   index: 0
 --- !u!114 &11495192
 MonoBehaviour:
