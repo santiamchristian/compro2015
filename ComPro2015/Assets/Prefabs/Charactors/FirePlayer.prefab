@@ -115,7 +115,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 923783bbbdc74744b950c82b0ae034d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 465962, guid: a719a539203eeca44adfe6a056b29dbd, type: 2}
+  abilities:
+  - {fileID: 400622, guid: 38bf284c6df4b5749bc48a661c24a4f7, type: 2}
+  - {fileID: 0}
+  - {fileID: 412442, guid: 4909fd16c64d667459e66fa41a5fe658, type: 2}
+  - {fileID: 0}
   coolDown: 1
 --- !u!114 &11438840
 MonoBehaviour:

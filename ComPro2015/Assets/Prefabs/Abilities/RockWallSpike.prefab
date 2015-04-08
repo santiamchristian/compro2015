@@ -14,7 +14,7 @@ GameObject:
   - 114: {fileID: 11494278}
   - 64: {fileID: 6494278}
   m_Layer: 0
-  m_Name: RockWall Spike
+  m_Name: RockWallSpike
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
