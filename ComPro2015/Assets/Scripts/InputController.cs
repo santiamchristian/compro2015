@@ -69,7 +69,7 @@ public class InputController : MonoBehaviour
     protected void Attack(int index)
     {
             Ability ability = players[index].GetComponentInChildren<Ability>();
-            ability.Use();
+            ability.Use(0);
     }
 
     protected void CharacterCreatorMenu(int index)

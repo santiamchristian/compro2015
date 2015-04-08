@@ -24,7 +24,7 @@ public class Tornado : Projectile {
         else if (health.playerIndex != shooterIndex)
         {
             health.Damage(damage);
-            Destroy();
+            
         }
         if (other.gameObject.tag == "Player")
         {

@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Ability : MonoBehaviour {
-    public Transform projectile;
+    public Transform[] abilities = new Transform[4];
     private int playerIndex;
     private GameObject projectiles;
     private float ElapsedTime;
@@ -18,12 +18,12 @@ public class Ability : MonoBehaviour {
         ElapsedTime += Time.deltaTime;
 	}
 
-    public void Use()
+    public void Use(int i)
     {
         if (coolDown <= ElapsedTime)
         {
 
-            Transform newProjectile = Instantiate(projectile, transform.position, transform.rotation) as Transform;
+            Transform newProjectile = Instantiate(abilities[i], transform.position, transform.rotation) as Transform;
             newProjectile.GetComponent<Projectile>().shooterIndex = playerIndex;
             newProjectile.transform.parent = projectiles.transform;
             ElapsedTime = 0;
