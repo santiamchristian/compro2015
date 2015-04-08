@@ -25,7 +25,10 @@ public class InputController : MonoBehaviour
         {
             if (Input.GetButton("Jump")) players[maxPlayers - 1].Jump();
             PopUpMenu("Cancel");
-            if (Input.GetButtonDown("Fire1")) Attack(maxPlayers - 1);
+            if (Input.GetButtonDown("Fire1")) Attack(maxPlayers - 1, 0);
+            if (Input.GetButtonDown("Fire2")) Attack(maxPlayers - 1, 1);
+            if (Input.GetButtonDown("Fire3")) Attack(maxPlayers - 1, 2);
+            if (Input.GetButtonDown("Fire4")) Attack(maxPlayers - 1, 3);
             players[maxPlayers - 1].RotateTowardsCursor();
             players[maxPlayers - 1].Direction(new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")));
         }
@@ -52,7 +55,7 @@ public class InputController : MonoBehaviour
                 players[i].Rotate(gamePad.rightStickAxis);
                 if (gamePad.RightTrigger > 0)
                 {
-                    Attack(i);
+                    Attack(i, 0);
                 }
             }
             else
@@ -66,10 +69,10 @@ public class InputController : MonoBehaviour
 
     }
 
-    protected void Attack(int index)
+    protected void Attack(int index, int attackType)
     {
             Ability ability = players[index].GetComponentInChildren<Ability>();
-            ability.Use(0);
+            ability.Use(attackType);
     }
 
     protected void CharacterCreatorMenu(int index)
