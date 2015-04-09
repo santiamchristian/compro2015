@@ -116,10 +116,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   abilities:
-  - {fileID: 400622, guid: 38bf284c6df4b5749bc48a661c24a4f7, type: 2}
-  - {fileID: 0}
-  - {fileID: 412442, guid: 4909fd16c64d667459e66fa41a5fe658, type: 2}
-  - {fileID: 0}
+  - {fileID: 412442, guid: d3ba5d1d3e5be3d41b151726391a8533, type: 2}
+  - {fileID: 413098, guid: 193839361ea8fd34c80c80ee36780fe4, type: 2}
+  - {fileID: 400622, guid: bce350e967e31a648be6e20986c6e5c4, type: 2}
+  - {fileID: 487834, guid: 1d3cbc296dd27da458dd2fb577fbf729, type: 2}
   coolDown: 1
 --- !u!114 &11438840
 MonoBehaviour:

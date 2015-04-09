@@ -117,8 +117,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilities:
   - {fileID: 450484, guid: 230e274e0764e9d4a81f7ffbb1b0d73f, type: 2}
-  - {fileID: 491786, guid: e88056795739fdd488d82d6fe8185c01, type: 2}
-  - {fileID: 409026, guid: a2db9c9367c94a34b932d3f7ac100293, type: 2}
+  - {fileID: 491786, guid: 18e0a26f237854b4abad5285c54350ca, type: 2}
+  - {fileID: 468002, guid: e79bc335111a8fe47bf4fc6738e09bba, type: 2}
   - {fileID: 458320, guid: d967c1ad4e46b53489581771c68182a5, type: 2}
   coolDown: 1
 --- !u!114 &11438840
