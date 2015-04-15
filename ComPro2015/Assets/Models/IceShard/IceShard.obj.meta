@@ -1,15 +1,15 @@
 fileFormatVersion: 2
-guid: 01f056adb4180b04b948e7a5bf528678
+guid: fdf3c7b6858c0cb4ab39fc99910625a9
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
-    100000: New_Game Object
+    100000: IceShard
     100002: //RootNode
-    400000: New_Game Object
+    400000: IceShard
     400002: //RootNode
-    2300000: New_Game Object
-    3300000: New_Game Object
-    4300000: New_Game Object
+    2300000: IceShard
+    3300000: IceShard
+    4300000: IceShard
     9500000: //RootNode
   materials:
     importMaterials: 1
