@@ -116,7 +116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   abilities:
-  - {fileID: 406080, guid: 672b050d818f08a46846b1e33ad3a870, type: 2}
+  - {fileID: 479432, guid: d7a4b396983104846b884aff31bdf9db, type: 2}
   - {fileID: 0}
   - {fileID: 494278, guid: d9ee248f04496b143b2c5be33a7049b5, type: 2}
   - {fileID: 0}

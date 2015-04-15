@@ -10,6 +10,8 @@ GameObject:
   - 4: {fileID: 476478}
   - 198: {fileID: 19876478}
   - 199: {fileID: 19976478}
+  - 65: {fileID: 6551770}
+  - 54: {fileID: 5403914}
   - 114: {fileID: 11476478}
   m_Layer: 0
   m_Name: Wind
@@ -25,11 +27,38 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 176478}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!54 &5403914
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 176478}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &6551770
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 176478}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &11476478
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -44,16 +73,16 @@ MonoBehaviour:
   speed: 10
   shooterIndex: 0
   damage: 0
-  duration: 30
+  duration: 5
   distanceFromGround: 1
-  dropSpeed: 0
+  dropSpeed: 10
 --- !u!198 &19876478
 ParticleSystem:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 176478}
-  lengthInSec: .100000001
+  lengthInSec: 4
   startDelay: 0
   speed: 1
   randomSeed: 0
@@ -64,7 +93,7 @@ ParticleSystem:
   InitialModule:
     enabled: 1
     startLifetime:
-      scalar: .5
+      scalar: 4
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -97,7 +126,7 @@ ParticleSystem:
         m_PostInfinity: 2
       minMaxState: 0
     startSpeed:
-      scalar: 3
+      scalar: 0
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -257,7 +286,7 @@ ParticleSystem:
         m_PostInfinity: 2
       minMaxState: 0
     startRotation:
-      scalar: 1.74532926
+      scalar: 0
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -272,34 +301,34 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: 1
+          value: 0
           inSlope: 0
           outSlope: 0
           tangentMode: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
-      minMaxState: 3
+      minMaxState: 0
     gravityModifier: 0
     inheritVelocity: 0
-    maxNumParticles: 2000
+    maxNumParticles: 1000
   ShapeModule:
     serializedVersion: 2
     enabled: 1
     type: 4
-    radius: .634796143
-    angle: 8.05393314
+    radius: .196035385
+    angle: 90
     length: 5
     boxX: 1.53262317
     boxY: 1.40386343
     boxZ: .126228929
     placementMode: 0
     m_Mesh: {fileID: 0}
-    randomDirection: 1
+    randomDirection: 0
   EmissionModule:
     enabled: 1
     m_Type: 0
     rate:
-      scalar: 750
+      scalar: 10
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -331,7 +360,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
       minMaxState: 0
-    cnt0: 1250
+    cnt0: 200
     cnt1: 30
     cnt2: 30
     cnt3: 30
@@ -341,19 +370,19 @@ ParticleSystem:
     time3: 0
     m_BurstCount: 1
   SizeModule:
-    enabled: 1
+    enabled: 0
     curve:
       scalar: 1
       maxCurve:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: 1
+          value: 0
           inSlope: 0
           outSlope: 0
           tangentMode: 0
-        - time: 1
-          value: .642335773
+        - time: .226765811
+          value: 1
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -548,7 +577,7 @@ ParticleSystem:
     cycles: 1
     randomRow: 1
   VelocityModule:
-    enabled: 1
+    enabled: 0
     x:
       scalar: 0
       maxCurve:
