@@ -12,7 +12,7 @@ GameObject:
   - 199: {fileID: 19994080}
   - 136: {fileID: 13694080}
   - 114: {fileID: 11494080}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hurricane
   m_TagString: Untagged
   m_Icon: {fileID: 0}

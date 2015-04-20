@@ -9,7 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 492916}
   - 65: {fileID: 6592920}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: IceShard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,7 +25,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 492918}
   - 95: {fileID: 9592920}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: IceShard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   - 4: {fileID: 492920}
   - 33: {fileID: 3392920}
   - 23: {fileID: 2392920}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: IceShard
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - 23: {fileID: 2394278}
   - 114: {fileID: 11494278}
   - 64: {fileID: 6494278}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RockWallSpike
   m_TagString: Untagged
   m_Icon: {fileID: 0}
