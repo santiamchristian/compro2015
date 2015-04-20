@@ -9,7 +9,7 @@ public class Projectile : MonoBehaviour
     public float duration = 30;
     public float distanceFromGround = 1f;
     public float dropSpeed;
-    private float elapsedTime;
+    protected float elapsedTime;
 
 
     // Use this for initialization
@@ -18,7 +18,7 @@ public class Projectile : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public virtual void Update()
     {
         elapsedTime += Time.deltaTime;
         rigidbody.velocity = transform.TransformDirection(Vector3.forward) * speed;
