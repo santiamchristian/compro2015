@@ -13,7 +13,7 @@ GameObject:
   - 65: {fileID: 6551770}
   - 54: {fileID: 5403914}
   - 114: {fileID: 11476478}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wind
   m_TagString: Untagged
   m_Icon: {fileID: 0}

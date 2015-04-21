@@ -12,7 +12,7 @@ GameObject:
   - 199: {fileID: 19952002}
   - 114: {fileID: 11452002}
   - 65: {fileID: 6552002}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tornado
   m_TagString: Untagged
   m_Icon: {fileID: 0}

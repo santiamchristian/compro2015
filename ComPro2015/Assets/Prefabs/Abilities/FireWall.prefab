@@ -13,7 +13,7 @@ GameObject:
   - 65: {fileID: 6500622}
   - 54: {fileID: 5400622}
   - 114: {fileID: 11400622}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FireWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}

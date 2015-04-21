@@ -9,7 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 493146}
   - 65: {fileID: 6589120}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,7 +26,7 @@ GameObject:
   - 4: {fileID: 493148}
   - 33: {fileID: 3393146}
   - 23: {fileID: 2393146}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 493150}
   - 95: {fileID: 9593146}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wave
   m_TagString: Untagged
   m_Icon: {fileID: 0}

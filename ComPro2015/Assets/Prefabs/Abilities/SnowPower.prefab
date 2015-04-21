@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 468002}
   - 198: {fileID: 19868002}
   - 199: {fileID: 19968002}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SnowPower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
