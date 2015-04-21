@@ -9,7 +9,7 @@ public class Volcano : Projectile {
     private int WavesShot;
 
 	// Use this for initialization
-	void Start () {
+	public override void Start () {
         projectiles = GameObject.Find("Projectiles");
 	}
 	
@@ -27,18 +27,18 @@ public class Volcano : Projectile {
 
 
 
-            Shoot(new Quaternion(0, 30, 0, 0));
-            Shoot(new Quaternion(0, 60, 0, 0));
-            Shoot(new Quaternion(0, 90, 0, 0));
-            Shoot(new Quaternion(0, 120, 0, 0));
-            Shoot(new Quaternion(0, 150, 0, 0));
-            Shoot(new Quaternion(0, 180, 0, 0));
-            Shoot(new Quaternion(0, 210, 0, 0));
-            Shoot(new Quaternion(0, 240, 0, 0));
-            Shoot(new Quaternion(0, 270, 0, 0));
-            Shoot(new Quaternion(0, 300, 0, 0));
-            Shoot(new Quaternion(0, 330, 0, 0));
-            Shoot(new Quaternion(0, 360, 0, 0));
+            Shoot(Quaternion.Euler(0, 30, 0));
+            Shoot(Quaternion.Euler(0, 60, 0));
+            Shoot(Quaternion.Euler(0, 90, 0));
+            Shoot(Quaternion.Euler(0, 120, 0));
+            Shoot(Quaternion.Euler(0, 150, 0));
+            Shoot(Quaternion.Euler(0, 180, 0));
+            Shoot(Quaternion.Euler(0, 210, 0));
+            Shoot(Quaternion.Euler(0, 240, 0));
+            Shoot(Quaternion.Euler(0, 270, 0));
+            Shoot(Quaternion.Euler(0, 300, 0));
+            Shoot(Quaternion.Euler(0, 330, 0));
+            Shoot(Quaternion.Euler(0, 360, 0));
             WavesShot++;
             elapsedTime = 0;
         }
