@@ -730,7 +730,7 @@ InputManager:
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: left alt
+    positiveButton: 1
     altNegativeButton: 
     altPositiveButton: mouse 0
     gravity: 1000
@@ -809,7 +809,7 @@ InputManager:
     m_Name: Fire2
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: left alt
+    negativeButton: 2
     positiveButton: 
     altNegativeButton: 
     altPositiveButton: mouse 1
@@ -906,9 +906,9 @@ InputManager:
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: 
+    positiveButton: q
     altNegativeButton: 
-    altPositiveButton: 
+    altPositiveButton: 3
     gravity: 1000
     dead: .00100000005
     sensitivity: 1000
@@ -922,9 +922,9 @@ InputManager:
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: 
+    positiveButton: e
     altNegativeButton: 
-    altPositiveButton: 
+    altPositiveButton: 4
     gravity: 1000
     dead: .00100000005
     sensitivity: 1000
