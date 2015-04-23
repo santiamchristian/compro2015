@@ -9,12 +9,14 @@ public class Projectile : MonoBehaviour
     public float duration = 30;
     public float distanceFromGround = 1f;
     public float dropSpeed;
+    public Vector3 positionOffset;
     protected float elapsedTime;
 
 
     // Use this for initialization
     public virtual void Start()
     {
+        
     }
 
     // Update is called once per frame

@@ -16,6 +16,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &169044
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 469044}
+  m_Layer: 0
+  m_Name: Tornado
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &188722
 GameObject:
   m_ObjectHideFlags: 0
@@ -47,8 +62,21 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: .829999983}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 469044}
   m_Father: {fileID: 488722}
+  m_RootOrder: 0
+--- !u!4 &469044
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 169044}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: .579999983, z: 4.67999983}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 428926}
   m_RootOrder: 0
 --- !u!4 &488722
 Transform:
@@ -57,7 +85,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 188722}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.50985718, y: 12.5727692, z: -10.9538879}
+  m_LocalPosition: {x: -112.736, y: 388.869202, z: -1011.86224}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 428926}
@@ -121,6 +149,11 @@ MonoBehaviour:
   - {fileID: 452002, guid: 30e7c243dc8a9494a927856e20433708, type: 2}
   - {fileID: 494080, guid: 39333fef57a4d8e4d8635dbf61681a9e, type: 2}
   coolDown: 1
+  startLocations:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 469044}
+  - {fileID: 0}
 --- !u!114 &11438840
 MonoBehaviour:
   m_ObjectHideFlags: 1
