@@ -26,6 +26,7 @@ GameObject:
   - 4: {fileID: 476708}
   - 33: {fileID: 3376710}
   - 23: {fileID: 2376710}
+  - 64: {fileID: 6412678}
   m_Layer: 0
   m_Name: pb-Pipe-524820
   m_TagString: Untagged
@@ -80,7 +81,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 176710}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .0368881226, y: 1.10000002, z: -7.87598228}
+  m_LocalPosition: {x: 13.603117, y: 1.10000002, z: -8.26668167}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 476706}
@@ -112,6 +113,19 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 176708}
+  m_Mesh: {fileID: 4300000, guid: 3967f4a5b3040dd428b209b7e91197df, type: 3}
+--- !u!64 &6412678
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 176708}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 3967f4a5b3040dd428b209b7e91197df, type: 3}
 --- !u!95 &9576710
 Animator:
