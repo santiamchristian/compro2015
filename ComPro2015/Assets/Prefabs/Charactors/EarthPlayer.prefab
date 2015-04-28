@@ -117,10 +117,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilities:
   - {fileID: 479432, guid: d7a4b396983104846b884aff31bdf9db, type: 2}
-  - {fileID: 0}
+  - {fileID: 476710, guid: 29194bdb504c5ca4cb52b5d025185ae4, type: 2}
   - {fileID: 494278, guid: d9ee248f04496b143b2c5be33a7049b5, type: 2}
   - {fileID: 0}
   coolDown: 1
+  startLocations:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &11438840
 MonoBehaviour:
   m_ObjectHideFlags: 1
