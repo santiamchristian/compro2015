@@ -3,11 +3,14 @@ using System.Collections;
 
 public class LevelController : MonoBehaviour
 {
-
+    public GameObject loadingScreen;
 	// Use this for initialization
-	void Start () {
-        loadLevel("Terrain");
-	}
+    IEnumerator Start()
+    {
+        AsyncOperation async = Application.LoadLevelAdditiveAsync("Terrain");
+        yield return async;
+        Debug.Log("Loading complete");
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -16,9 +19,5 @@ public class LevelController : MonoBehaviour
             Destroy(debug);
 	}
 
-    void loadLevel(string levelName)
-    {
-        Application.LoadLevelAdditive(levelName);
-
-    }
+ 
 }
