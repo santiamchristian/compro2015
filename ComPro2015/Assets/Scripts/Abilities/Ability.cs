@@ -6,7 +6,6 @@ public class Ability : MonoBehaviour {
     private int playerIndex;
     private GameObject projectiles;
     private float ElapsedTime;
-    public float coolDown = 1;
     public Transform[] startLocations = new Transform[4];
 
     void Start()
@@ -21,7 +20,7 @@ public class Ability : MonoBehaviour {
 
     public void Use(int i)
     {
-        if (coolDown <= ElapsedTime)
+        if (abilities[i].GetComponent<Projectile>().coolDown <= ElapsedTime)
         {
             Transform newProjectile;
             if(startLocations[i] != null)

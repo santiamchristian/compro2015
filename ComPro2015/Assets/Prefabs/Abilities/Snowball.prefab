@@ -72,10 +72,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   shooterIndex: 0
-  damage: 100
-  duration: 4
+  damage: 10
+  duration: 5
   distanceFromGround: 2
   dropSpeed: 5
+  positionOffset: {x: 0, y: 0, z: 0}
+  coolDown: 1
 --- !u!198 &19850484
 ParticleSystem:
   m_ObjectHideFlags: 1

@@ -172,9 +172,11 @@ MonoBehaviour:
   speed: 10
   shooterIndex: 0
   damage: 10
-  duration: 4
+  duration: 5
   distanceFromGround: 1
   dropSpeed: 10
+  positionOffset: {x: 0, y: 0, z: 0}
+  coolDown: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

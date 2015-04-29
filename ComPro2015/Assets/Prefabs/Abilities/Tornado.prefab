@@ -105,6 +105,7 @@ MonoBehaviour:
   distanceFromGround: .5
   dropSpeed: 0
   positionOffset: {x: 100, y: 100, z: 0}
+  coolDown: 3
   LaunchDistance: 60
 --- !u!198 &19815738
 ParticleSystem:

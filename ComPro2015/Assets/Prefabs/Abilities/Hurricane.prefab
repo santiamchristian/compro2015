@@ -44,10 +44,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   shooterIndex: 0
-  damage: 0
-  duration: 30
+  damage: 20
+  duration: 6
   distanceFromGround: .100000001
   dropSpeed: 0
+  positionOffset: {x: 0, y: 0, z: 0}
+  coolDown: 3
   LaunchDistance: 60
 --- !u!136 &13694080
 CapsuleCollider:

@@ -9,8 +9,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 481472}
   - 65: {fileID: 6580828}
+  - 54: {fileID: 5487356}
+  - 114: {fileID: 11487356}
   m_Layer: 0
-  m_Name: 'Lava Pool '
+  m_Name: LavaPool
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56,7 +58,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 181472}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.49043274, y: 1.37299991, z: -24.6323757}
+  m_LocalPosition: {x: -126.177704, y: 387.859924, z: -1003.87451}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 481476}
@@ -114,6 +116,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 181474}
   m_Mesh: {fileID: 4300000, guid: fe61d1397f467f84f8f837ce56d727ce, type: 3}
+--- !u!54 &5487356
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 181472}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!65 &6580828
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -121,7 +138,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 181472}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 3.5999999, y: .5, z: 4.5}
@@ -141,6 +158,25 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11487356
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 181472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f588b706a30c6646a9e7ae0186e2381, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  shooterIndex: 0
+  damage: 30
+  duration: 9
+  distanceFromGround: 1
+  dropSpeed: 0
+  positionOffset: {x: 0, y: 0, z: 0}
+  coolDown: 9
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

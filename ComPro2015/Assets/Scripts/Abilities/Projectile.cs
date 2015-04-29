@@ -10,6 +10,7 @@ public class Projectile : MonoBehaviour
     public float distanceFromGround = 1f;
     public float dropSpeed;
     public Vector3 positionOffset;
+    public float coolDown = 1;
     protected float elapsedTime;
 
 
