@@ -13,6 +13,7 @@ GameObject:
   - 23: {fileID: 2394278}
   - 114: {fileID: 11494278}
   - 64: {fileID: 6494278}
+  - 114: {fileID: 11474298}
   m_Layer: 8
   m_Name: RockWallSpike
   m_TagString: Untagged
@@ -72,6 +73,24 @@ MeshCollider:
   m_SmoothSphereCollisions: 0
   m_Convex: 0
   m_Mesh: {fileID: 0}
+--- !u!114 &11474298
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 194278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f588b706a30c6646a9e7ae0186e2381, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  shooterIndex: 0
+  damage: 0
+  duration: 30
+  distanceFromGround: 1
+  dropSpeed: 0
+  positionOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &11494278
 MonoBehaviour:
   m_ObjectHideFlags: 1
