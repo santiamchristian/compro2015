@@ -34,16 +34,16 @@ Material:
         second: .699999988
       data:
         first:
-          name: _Occlusion
-        second: 0
-      data:
-        first:
           name: _BaseLight
         second: .556603789
       data:
         first:
           name: _AO
         second: 6.69811296
+      data:
+        first:
+          name: _Occlusion
+        second: 0
     m_Colors:
       data:
         first:
