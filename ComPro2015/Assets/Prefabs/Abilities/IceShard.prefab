@@ -172,7 +172,7 @@ MonoBehaviour:
   speed: 25
   shooterIndex: 0
   damage: 5
-  duration: 3
+  duration: 1
   distanceFromGround: 1
   dropSpeed: 0
   positionOffset: {x: 0, y: 0, z: 0}
