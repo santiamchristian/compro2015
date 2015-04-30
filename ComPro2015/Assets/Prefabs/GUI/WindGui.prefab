@@ -8,6 +8,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 224: {fileID: 22438522}
+  - 114: {fileID: 11406070}
   m_Layer: 0
   m_Name: WindGui
   m_TagString: Untagged
@@ -260,6 +261,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &11406070
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3381bcb5f09a7e4439758e4c00c11320, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeBar: {fileID: 22438550}
+  abilities:
+  - {fileID: 22438538}
+  - {fileID: 22438544}
+  - {fileID: 22438548}
+  - {fileID: 22438534}
 --- !u!114 &11438534
 MonoBehaviour:
   m_ObjectHideFlags: 1
