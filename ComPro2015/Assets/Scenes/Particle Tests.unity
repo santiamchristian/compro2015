@@ -199,11 +199,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 468002, guid: e79bc335111a8fe47bf4fc6738e09bba, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e79bc335111a8fe47bf4fc6738e09bba, type: 2}
-  m_RootGameObject: {fileID: 104742160}
+  m_RootGameObject: {fileID: 1533762368}
   m_IsPrefabParent: 0
   m_IsExploded: 1
 --- !u!1 &104742160
@@ -1319,8 +1319,8 @@ Transform:
   m_LocalPosition: {x: -14.9300003, y: 4.57000017, z: -25.8600006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 1533762372}
+  m_RootOrder: 0
 --- !u!1 &113131288
 GameObject:
   m_ObjectHideFlags: 0
@@ -1359,6 +1359,7 @@ MonoBehaviour:
   distanceFromGround: .100000001
   dropSpeed: 0
   positionOffset: {x: 0, y: 0, z: 0}
+  coolDown: 1
   LaunchDistance: 54
 --- !u!65 &113131290
 BoxCollider:
@@ -2937,7 +2938,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 21
 --- !u!43 &265683236
 Mesh:
   m_ObjectHideFlags: 0
@@ -5191,7 +5192,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!114 &441147358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5211,6 +5212,7 @@ MonoBehaviour:
   distanceFromGround: 1
   dropSpeed: 10
   positionOffset: {x: 0, y: 0, z: 0}
+  coolDown: 1
 --- !u!54 &441147359
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5334,6 +5336,7 @@ MonoBehaviour:
   distanceFromGround: .5
   dropSpeed: 0
   positionOffset: {x: 100, y: 100, z: 0}
+  coolDown: 3
   LaunchDistance: 54
 --- !u!1 &498129139
 GameObject:
@@ -5392,7 +5395,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!1 &505589934
 GameObject:
   m_ObjectHideFlags: 0
@@ -9434,7 +9437,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 450484, guid: 230e274e0764e9d4a81f7ffbb1b0d73f, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 230e274e0764e9d4a81f7ffbb1b0d73f, type: 2}
@@ -9572,6 +9575,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 20
+--- !u!1 &876035257
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 876035258}
+  - 114: {fileID: 876035259}
+  m_Layer: 0
+  m_Name: LightningAttack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &876035258
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 876035257}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7, y: 2, z: -19}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 876907987}
+  - {fileID: 1987987090}
+  m_Father: {fileID: 0}
+  m_RootOrder: 22
+--- !u!114 &876035259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 876035257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f588b706a30c6646a9e7ae0186e2381, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  shooterIndex: 0
+  damage: 0
+  duration: 30
+  distanceFromGround: 6
+  dropSpeed: 0
+  positionOffset: {x: 0, y: 0, z: 0}
+  coolDown: 1
 --- !u!1 &876907984
 GameObject:
   m_ObjectHideFlags: 0
@@ -9583,7 +9635,7 @@ GameObject:
   - 198: {fileID: 876907986}
   - 199: {fileID: 876907985}
   m_Layer: 0
-  m_Name: Lightning
+  m_Name: Lightning_Bolt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9601,7 +9653,7 @@ ParticleSystemRenderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: eb47acb636575a24dbd634f563885144, type: 2}
+  - {fileID: 2100000, guid: 3029bcb2db5ab8f488fb01a17e50bb10, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -9628,7 +9680,7 @@ ParticleSystem:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 876907984}
   lengthInSec: 1
-  startDelay: 0
+  startDelay: 1
   speed: 1
   randomSeed: 0
   looping: 1
@@ -9638,7 +9690,7 @@ ParticleSystem:
   InitialModule:
     enabled: 1
     startLifetime:
-      scalar: .0700000003
+      scalar: .0900000036
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -9798,7 +9850,7 @@ ParticleSystem:
         rgba: 4294967295
       minMaxState: 0
     startSize:
-      scalar: 1
+      scalar: 4.5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -9915,7 +9967,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
       minMaxState: 0
-    cnt0: 1000
+    cnt0: 10000
     cnt1: 30
     cnt2: 30
     cnt3: 30
@@ -10680,11 +10732,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 876907984}
   m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106829}
-  m_LocalPosition: {x: 7, y: 3, z: -19}
+  m_LocalPosition: {x: 0, y: -0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_Father: {fileID: 876035258}
+  m_RootOrder: 0
 --- !u!1001 &905551995
 Prefab:
   m_ObjectHideFlags: 0
@@ -15384,7 +15436,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1 &1070004664
 GameObject:
   m_ObjectHideFlags: 0
@@ -15419,11 +15471,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   shooterIndex: 0
-  damage: 100
-  duration: 4
+  damage: 10
+  duration: 5
   distanceFromGround: 2
   dropSpeed: 5
   positionOffset: {x: 0, y: 0, z: 0}
+  coolDown: 1
 --- !u!54 &1070004666
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -16540,7 +16593,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
 --- !u!43 &1101176131
 Mesh:
   m_ObjectHideFlags: 0
@@ -18224,7 +18277,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!54 &1301646071
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -18273,6 +18326,7 @@ MonoBehaviour:
   distanceFromGround: 1
   dropSpeed: 10
   positionOffset: {x: 0, y: 0, z: 0}
+  coolDown: 1
 --- !u!1 &1378404960
 GameObject:
   m_ObjectHideFlags: 0
@@ -18423,6 +18477,86 @@ RectTransform:
   m_AnchoredPosition: {x: -392, y: 215}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: .5, y: .5}
+--- !u!1 &1533762368
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114178, guid: e79bc335111a8fe47bf4fc6738e09bba, type: 2}
+  m_PrefabInternal: {fileID: 30134186}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1533762372}
+  - 65: {fileID: 1533762371}
+  - 54: {fileID: 1533762370}
+  - 114: {fileID: 1533762369}
+  m_Layer: 8
+  m_Name: SnowPower
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1533762369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11414178, guid: e79bc335111a8fe47bf4fc6738e09bba,
+    type: 2}
+  m_PrefabInternal: {fileID: 30134186}
+  m_GameObject: {fileID: 1533762368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f588b706a30c6646a9e7ae0186e2381, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  shooterIndex: 0
+  damage: 10
+  duration: 10
+  distanceFromGround: 1
+  dropSpeed: 0
+  positionOffset: {x: 0, y: 0, z: 0}
+  coolDown: 5
+--- !u!54 &1533762370
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5414178, guid: e79bc335111a8fe47bf4fc6738e09bba,
+    type: 2}
+  m_PrefabInternal: {fileID: 30134186}
+  m_GameObject: {fileID: 1533762368}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &1533762371
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6514178, guid: e79bc335111a8fe47bf4fc6738e09bba,
+    type: 2}
+  m_PrefabInternal: {fileID: 30134186}
+  m_GameObject: {fileID: 1533762368}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1533762372
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 414178, guid: e79bc335111a8fe47bf4fc6738e09bba, type: 2}
+  m_PrefabInternal: {fileID: 30134186}
+  m_GameObject: {fileID: 1533762368}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 104742163}
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
 --- !u!1001 &1595236076
 Prefab:
   m_ObjectHideFlags: 0
@@ -18819,6 +18953,7 @@ MonoBehaviour:
   distanceFromGround: 1
   dropSpeed: 10
   positionOffset: {x: 0, y: 0, z: 0}
+  coolDown: 1
 --- !u!54 &1731290439
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -19935,7 +20070,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!1 &1770451703
 GameObject:
   m_ObjectHideFlags: 0
@@ -22135,7 +22270,7 @@ Transform:
   m_LocalScale: {x: 7.78000021, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
 --- !u!43 &1796635248
 Mesh:
   m_ObjectHideFlags: 0
@@ -22347,7 +22482,7 @@ Transform:
   m_LocalScale: {x: 37.7799988, y: 1, z: 43.0900002}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!1001 &1978772415
 Prefab:
   m_ObjectHideFlags: 0
@@ -22690,7 +22825,7 @@ ParticleSystem:
     serializedVersion: 2
     enabled: 1
     type: 2
-    radius: 1
+    radius: .75
     angle: 25
     length: 5
     boxX: 1
@@ -22703,7 +22838,7 @@ ParticleSystem:
     enabled: 1
     m_Type: 0
     rate:
-      scalar: 10
+      scalar: 100
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -22745,7 +22880,7 @@ ParticleSystem:
     time3: 0
     m_BurstCount: 0
   SizeModule:
-    enabled: 0
+    enabled: 1
     curve:
       scalar: 1
       maxCurve:
@@ -22757,7 +22892,7 @@ ParticleSystem:
           outSlope: 0
           tangentMode: 0
         - time: 1
-          value: 1
+          value: 0
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -23500,11 +23635,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1987987087}
   m_LocalRotation: {x: -.707106829, y: 0, z: 0, w: .707106829}
-  m_LocalPosition: {x: 7, y: 3.45000005, z: -19}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 1.94000006, z: 0}
+  m_LocalScale: {x: 2.23000002, y: 2.19000006, z: 1.79999995}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_Father: {fileID: 876035258}
+  m_RootOrder: 1
 --- !u!43 &1994890651
 Mesh:
   m_ObjectHideFlags: 0
@@ -23716,6 +23851,7 @@ MonoBehaviour:
   distanceFromGround: 1
   dropSpeed: 0
   positionOffset: {x: 0, y: 0, z: 0}
+  coolDown: 1
 --- !u!95 &2014566419
 Animator:
   serializedVersion: 3
