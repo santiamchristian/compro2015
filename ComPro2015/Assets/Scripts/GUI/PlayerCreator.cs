@@ -26,9 +26,10 @@ public class PlayerCreator : MonoBehaviour {
     {
         Transform newPlayer = Instantiate(playerPrefabs[(int)type], inputController.transform.position, Quaternion.identity) as Transform;
         newPlayer.parent = inputController.transform;
-        newPlayer.GetComponent<Player>().playerIndex = index;
+        Player playerComp = newPlayer.GetComponent<Player>();
+        playerComp.playerIndex = index;
         inputController.players[index] = newPlayer.GetComponent<MovementController>();
-        playerGui.AddPlayer(index, (ElementEnum)type);
+        playerComp.playerGUI = playerGui.AddPlayer(index, (ElementEnum)type);
         Destroy(gameObject);
     }
 

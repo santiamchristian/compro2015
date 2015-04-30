@@ -13,7 +13,7 @@ public class InputController : MonoBehaviour
 
     void Start()
     {
-        if(asManyPlayersAsControllers)
+        if (asManyPlayersAsControllers)
             if (Input.GetJoystickNames().Length > maxPlayers)
                 maxPlayers = Input.GetJoystickNames().Length + 1;
         players = new MovementController[maxPlayers];
@@ -38,14 +38,14 @@ public class InputController : MonoBehaviour
             {
                 CharacterCreatorMenu(maxPlayers - 1);
             }
-                
+
         }
 
         for (int i = 0; i < (maxPlayers - 1); i++)
         {
             GamepadInput.GamepadState gamePad = GamepadInput.GamePad.GetState((GamepadInput.GamePad.Index)(i + 1));
             if (players[i] != null)
-            {                
+            {
                 players[i].Direction(gamePad.LeftStickAxis);
 
                 if (gamePad.A)
@@ -71,13 +71,14 @@ public class InputController : MonoBehaviour
 
     protected void Attack(int index, int attackType)
     {
-            Ability ability = players[index].GetComponentInChildren<Ability>();
-            ability.Use(attackType);
+        Ability ability = players[index].GetComponentInChildren<Ability>();
+        ability.Use(attackType);
     }
 
     protected void CharacterCreatorMenu(int index)
     {
-        if (charactorCreatorMenu == null) { 
+        if (charactorCreatorMenu == null)
+        {
             charactorCreatorMenu = Instantiate(charatorCreatorPrefab) as Transform;
             charactorCreatorMenu.GetComponent<PlayerCreator>().index = index;
         }
@@ -112,7 +113,7 @@ public class InputController : MonoBehaviour
         //players[index] = newPlayer.GetComponent<MovementController>();
         //playerGui.AddPlayer(index, (ElementEnum)type);
     }
- 
+
 
 
 
