@@ -12,6 +12,7 @@ GameObject:
   - 199: {fileID: 19994080}
   - 136: {fileID: 13694080}
   - 114: {fileID: 11494080}
+  - 54: {fileID: 5432028}
   m_Layer: 8
   m_Name: Hurricane
   m_TagString: Untagged
@@ -31,6 +32,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!54 &5432028
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 194080}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!114 &11494080
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -50,7 +66,7 @@ MonoBehaviour:
   dropSpeed: 0
   positionOffset: {x: 0, y: 0, z: 0}
   coolDown: 3
-  LaunchDistance: 60
+  LaunchDistance: 0
 --- !u!136 &13694080
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -62,7 +78,7 @@ CapsuleCollider:
   m_Enabled: 1
   m_Radius: 3
   m_Height: 3.02999997
-  m_Direction: 2
+  m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!198 &19894080
 ParticleSystem:

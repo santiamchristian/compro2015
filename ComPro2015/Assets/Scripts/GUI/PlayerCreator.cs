@@ -29,7 +29,7 @@ public class PlayerCreator : MonoBehaviour {
         Player playerComp = newPlayer.GetComponent<Player>();
         playerComp.playerIndex = index;
         inputController.players[index] = newPlayer.GetComponent<MovementController>();
-        playerComp.playerGUI = playerGui.AddPlayer(index, (ElementEnum)type);
+        playerComp.playerGUI = playerGui.AddPlayer(index, (ElementEnum)type).GetComponent<GUi>();
         Destroy(gameObject);
     }
 

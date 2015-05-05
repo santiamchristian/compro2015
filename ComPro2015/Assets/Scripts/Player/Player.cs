@@ -3,11 +3,9 @@ using System.Collections;
 
 public class Player : MonoBehaviour {
     public int playerIndex;
-    public RectTransform playerGUI;
-    public RectTransform lifeBar;
+    public GUi playerGUI;
 
     void Start()
     {
-        lifeBar = playerGUI;
     }
 }

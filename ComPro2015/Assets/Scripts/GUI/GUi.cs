@@ -1,17 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class GUi : MonoBehaviour {
     public RectTransform lifeBar;
     public RectTransform[] abilities = new RectTransform[4];
 
-	// Use this for initialization
-	void Start () {
-	    
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    public void SetAbilityCooldown(float cooldown, int ability)
+    {
+        abilities[ability].GetComponent<Image>().color = new Color(1, 1, 1, Mathf.Clamp(cooldown, 0, 1));
+    }
 }
