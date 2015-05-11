@@ -13,6 +13,8 @@ public class InputController : MonoBehaviour
 
     void Start()
     {
+        GameObject spawn = GameObject.Find("PlayerSpawn");
+        transform.position = spawn.transform.position; 
         if (asManyPlayersAsControllers)
             if (Input.GetJoystickNames().Length > maxPlayers)
                 maxPlayers = Input.GetJoystickNames().Length + 1;
