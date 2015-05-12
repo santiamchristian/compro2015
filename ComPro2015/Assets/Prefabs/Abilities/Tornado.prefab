@@ -100,7 +100,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   shooterIndex: 1
+  wall: 0
   damage: 10
+  expires: 1
   duration: 5
   distanceFromGround: .5
   dropSpeed: 0
