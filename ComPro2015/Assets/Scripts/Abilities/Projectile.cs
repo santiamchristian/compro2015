@@ -5,7 +5,9 @@ public class Projectile : MonoBehaviour
 {
     public int speed;
     public int shooterIndex;
+    public bool wall;
     public int damage;
+    public bool expires;
     public float duration = 30;
     public float distanceFromGround = 1f;
     public float dropSpeed;
@@ -26,7 +28,7 @@ public class Projectile : MonoBehaviour
         elapsedTime += Time.deltaTime;
         rigidbody.velocity = transform.TransformDirection(Vector3.forward) * speed;
         Move();
-        if (elapsedTime >= duration)
+        if (expires && elapsedTime >= duration)
             Destroy();
     }
     public void Destroy()
@@ -36,14 +38,17 @@ public class Projectile : MonoBehaviour
 
     public virtual void OnTriggerEnter(Collider other)
     {
-        Health health = other.GetComponent<Health>();
-        if (health == null)
-            Destroy();
-        else if (health.playerIndex != shooterIndex)
-        {
-            health.Damage(damage);
-            Destroy();
+        if (!wall) { 
+            Health health = other.GetComponent<Health>();
+            if (health == null)
+                Destroy();
+            else if (health.playerIndex != shooterIndex)
+            {
+                health.Damage(damage);
+                Destroy();
+            }
         }
+        
 
     }
     void Move()
