@@ -16,7 +16,8 @@ public class Health : MonoBehaviour
 
         if (hp <= 0)
         {
-            gui.Destroy();
+            if (gui != null)
+                gui.Destroy();
             Destroy(gameObject);
         }
     }
@@ -24,14 +25,23 @@ public class Health : MonoBehaviour
     void Start()
     {
         maxHP = hp;
-        playerIndex = transform.GetComponent<Player>().playerIndex;
-        gui = transform.GetComponent<Player>().playerGUI;
+
+        if (!isEnemy)
+        {
+            playerIndex = transform.GetComponent<Player>().playerIndex;
+            gui = transform.GetComponent<Player>().playerGUI;
+        }
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        gui.SetHealthBar(hp, maxHP);
+        if (gui != null)
+        {
+            gui.SetHealthBar(hp, maxHP);
+        }
+        
     }
 
 
