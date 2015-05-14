@@ -34,6 +34,11 @@ public class Health : MonoBehaviour
 
     }
 
+    public void Kill()
+    {
+        Damage(maxHP);
+    }
+
     // Update is called once per frame
     void Update()
     {
