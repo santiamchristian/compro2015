@@ -1,0 +1,11 @@
+
+newmtl New Material 7
+Ka  1.0 1.0 1.0
+Kd  1.0 1.0 1.0
+Ks  1.0 1.0 1.0
+d  1.0
+Ns  0.0
+illum 2
+map_Kd grunge_texture_by_rocknroll93-d2xqm53.jpg
+
+

@@ -25,6 +25,7 @@ public class Ability : MonoBehaviour {
         {
             ElapsedTimes[i] += Time.deltaTime;
             gui.SetAbilityCooldown(ElapsedTimes[i] / abilities[i].GetComponent<Projectile>().coolDown, i);
+            Projectile test = abilities[i].GetComponent<Projectile>();
             
         }
 	}
