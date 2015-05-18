@@ -48,7 +48,14 @@ public class Projectile : MonoBehaviour
                 Destroy();
             }
         }
-        
+        else
+        {
+            if (other.tag == "Enemy")
+            {
+                Enemy enemy = other.GetComponent<Enemy>();
+                enemy.walled = gameObject;
+            }
+        }
 
     }
     void Move()

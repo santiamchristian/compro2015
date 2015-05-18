@@ -44,7 +44,7 @@ GameObject:
   - 4: {fileID: 476710}
   - 114: {fileID: 11423764}
   - 54: {fileID: 5477888}
-  - 65: {fileID: 6513796}
+  - 136: {fileID: 13640706}
   m_Layer: 0
   m_Name: ShubberyAttack
   m_TagString: Untagged
@@ -84,7 +84,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 176710}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.603117, y: 1.10000002, z: -8.26668167}
+  m_LocalPosition: {x: 150.449997, y: 3.32999992, z: 260.459991}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 476706}
@@ -145,18 +145,6 @@ MeshCollider:
   m_SmoothSphereCollisions: 0
   m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 3967f4a5b3040dd428b209b7e91197df, type: 3}
---- !u!65 &6513796
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 176710}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &9576710
 Animator:
   serializedVersion: 3
@@ -185,12 +173,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   shooterIndex: 0
+  wall: 1
   damage: 10
+  expires: 1
   duration: 10
   distanceFromGround: 1
   dropSpeed: 0
   positionOffset: {x: 0, y: 0, z: 0}
   coolDown: 20
+--- !u!136 &13640706
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 176710}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 4.25
+  m_Height: 12.7799997
+  m_Direction: 1
+  m_Center: {x: -.0500000007, y: 2.97000003, z: -.790000021}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
