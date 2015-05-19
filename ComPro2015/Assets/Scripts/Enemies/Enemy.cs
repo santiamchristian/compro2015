@@ -6,7 +6,8 @@ public class Enemy : MonoBehaviour {
     public NavMeshAgent agent;
     public Transform target;
     public GameObject walled;
-    public Ability abilities; 
+    public Ability abilities;
+    public int index; 
 
 	// Use this for initialization
 	void Start () {
