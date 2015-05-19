@@ -59,8 +59,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 152912}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 150.899994, y: 3.79999995, z: 261.399994}
+  m_LocalRotation: {x: 0, y: -0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.3499999, y: -6.19999981, z: -3.4000001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 452914}
@@ -177,13 +177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilities:
   - {fileID: 412442, guid: d3ba5d1d3e5be3d41b151726391a8533, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   startLocations:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 0}
 --- !u!136 &13688820
 CapsuleCollider:

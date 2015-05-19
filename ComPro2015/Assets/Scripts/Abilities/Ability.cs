@@ -17,7 +17,7 @@ public class Ability : MonoBehaviour {
             shooterIndex = transform.parent.GetComponent<Player>().playerIndex;
             gui = transform.parent.GetComponent<Player>().playerGUI;
         }
-        else if(gameObject.tag == "Player")
+        else if(gameObject.tag == "Enemy")
         {
             shooterIndex = transform.parent.GetComponent<Enemy>().index;
         }
@@ -32,8 +32,9 @@ public class Ability : MonoBehaviour {
         for (int i = 0; i < ElapsedTimes.Length; i++)
         {
             ElapsedTimes[i] += Time.deltaTime;
-            gui.SetAbilityCooldown(ElapsedTimes[i] / abilities[i].GetComponent<Projectile>().coolDown, i);
-            Projectile test = abilities[i].GetComponent<Projectile>();
+            if (gameObject.tag == "Player")
+                gui.SetAbilityCooldown(ElapsedTimes[i] / abilities[i].GetComponent<Projectile>().coolDown, i);
+            
             
         }
 	}
