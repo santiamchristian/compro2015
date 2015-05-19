@@ -1,5 +1,38 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &114450
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 414450}
+  - 95: {fileID: 9514452}
+  m_Layer: 0
+  m_Name: RockFist
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &114452
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 414452}
+  - 33: {fileID: 3314452}
+  - 23: {fileID: 2314452}
+  m_Layer: 0
+  m_Name: RockFist
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &168304
 GameObject:
   m_ObjectHideFlags: 0
@@ -8,11 +41,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 468304}
-  - 33: {fileID: 3368304}
-  - 23: {fileID: 2368304}
-  - 64: {fileID: 6468304}
   - 54: {fileID: 5468304}
   - 114: {fileID: 11404290}
+  - 65: {fileID: 6514452}
   m_Layer: 0
   m_Name: RockFist
   m_TagString: Untagged
@@ -20,6 +51,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 61
   m_IsActive: 1
+--- !u!4 &414450
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 114450}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 414452}
+  m_Father: {fileID: 468304}
+  m_RootOrder: 0
+--- !u!4 &414452
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 114452}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 414450}
+  m_RootOrder: 0
 --- !u!4 &468304
 Transform:
   m_ObjectHideFlags: 1
@@ -27,24 +83,25 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 168304}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalPosition: {x: -4, y: 10, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 414450}
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!23 &2368304
+--- !u!23 &2314452
 Renderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 168304}
+  m_GameObject: {fileID: 114452}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 9e2d4621a9cd10f41a58cdf502deefa6, type: 2}
+  - {fileID: 2100000, guid: 65090138cb8886241a87b60c0c88bee1, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -52,12 +109,12 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!33 &3368304
+--- !u!33 &3314452
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 168304}
+  m_GameObject: {fileID: 114452}
   m_Mesh: {fileID: 4300000, guid: 7f76e559d07949f489dbf6013cfdecae, type: 3}
 --- !u!54 &5468304
 Rigidbody:
@@ -74,8 +131,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &6468304
-MeshCollider:
+--- !u!65 &6514452
+BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -84,9 +141,23 @@ MeshCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: 7f76e559d07949f489dbf6013cfdecae, type: 3}
+  m_Size: {x: 3.1210413, y: 3.01307034, z: 3.0673461}
+  m_Center: {x: 1.06052065, y: .519996643, z: -1.03367305}
+--- !u!95 &9514452
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 114450}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 7f76e559d07949f489dbf6013cfdecae, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11404290
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -105,7 +176,7 @@ MonoBehaviour:
   expires: 1
   duration: 30
   distanceFromGround: 1
-  dropSpeed: 1
+  dropSpeed: 15
   positionOffset: {x: 0, y: 0, z: 0}
   coolDown: 10
 --- !u!1001 &100100000
