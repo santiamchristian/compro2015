@@ -14,6 +14,7 @@ public class Projectile : MonoBehaviour
     public Vector3 positionOffset;
     public float coolDown = 1;
     protected float elapsedTime;
+    public bool continueAfterHit = false;
 
 
     // Use this for initialization
@@ -45,6 +46,7 @@ public class Projectile : MonoBehaviour
             else if (health.playerIndex != shooterIndex)
             {
                 health.Damage(damage);
+                if(!continueAfterHit)
                 Destroy();
             }
         }
