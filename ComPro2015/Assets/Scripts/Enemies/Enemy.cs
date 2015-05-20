@@ -4,14 +4,16 @@ using System.Collections;
 public class Enemy : MonoBehaviour {
 
     public NavMeshAgent agent;
-    public Transform target;
+    public Transform[] targets;
     public GameObject walled;
     public Ability abilities;
-    public int index; 
+    public int index;
+
+    private int targetIndex; 
 
 	// Use this for initialization
 	void Start () {
-        SetTarget();
+        SetTarget(0);
         abilities = gameObject.GetComponentInChildren<Ability>();
 	}
 	
@@ -37,16 +39,23 @@ public class Enemy : MonoBehaviour {
                 }
             }
         }
+        for (int i = 0; i < targets.Length; i++)
+        {
+            if(targets[i] != null && targetIndex == i){
+                break;
+            }
+            else if (targets[i] != null && targetIndex != i)
+            {
+                SetTarget(i);
+                break;
+            }
+        }
     }
 
-    void SetTarget ()
+    void SetTarget (int i)
     {
-        agent.SetDestination(target.position);
-    }
-
-    public virtual void OnTriggerExit (Collider other)
-    {
-
+        agent.SetDestination(targets[i].transform.position);
+        targetIndex = i;
     }
 
 }
