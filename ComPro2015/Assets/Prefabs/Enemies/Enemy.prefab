@@ -86,7 +86,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 166450}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.36000001}
+  m_LocalPosition: {x: 0, y: 1.29999995, z: 1.41999996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 452912}
@@ -145,9 +145,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 19553176}
-  target: {fileID: 0}
+  targets: []
   walled: {fileID: 0}
-  abilities: {fileID: 0}
+  abilities: {fileID: 11466450}
   index: -1
 --- !u!114 &11464112
 MonoBehaviour:

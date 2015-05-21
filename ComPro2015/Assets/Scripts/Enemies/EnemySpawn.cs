@@ -23,6 +23,7 @@ public class EnemySpawn : MonoBehaviour {
         else {
             if (elapsedTime >= spawnTimer)
             {
+                elapsedTime = 0;
                 SpawnEnemies();
             }
         }
@@ -31,8 +32,8 @@ public class EnemySpawn : MonoBehaviour {
 
     void SpawnEnemies()
     {
-        Transform newEnemy = Instantiate(enemyPrefab, transform.position, transform.rotation) as Transform;
-        newEnemy.parent = enemyContainer.transform;
+        GameObject newEnemy = Instantiate(enemyPrefab, transform.position, transform.rotation) as GameObject;
+        newEnemy.transform.parent = enemyContainer.transform;
         newEnemy.GetComponent<Enemy>().targets = targets;
     }
 }

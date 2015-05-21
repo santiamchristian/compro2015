@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Enemy : MonoBehaviour {
 
@@ -9,53 +10,54 @@ public class Enemy : MonoBehaviour {
     public Ability abilities;
     public int index;
 
+    private bool targetSet;
     private int targetIndex; 
 
 	// Use this for initialization
 	void Start () {
-        SetTarget(0);
         abilities = gameObject.GetComponentInChildren<Ability>();
 	}
 	
 	// Update is called once per frame
     void Update()
     {
-        if (walled == null)
+        if (targetSet)
         {
-            agent.Resume();
-        }
-        else
-            agent.Stop();
-
-        if (!agent.pathPending)
-        {
-            if (agent.remainingDistance <= agent.stoppingDistance)
+            if (walled == null)
             {
-                abilities.Use(0);
+                agent.Resume();
+            }
+            else
+                agent.Stop();
 
-                if (!agent.hasPath || agent.velocity.sqrMagnitude == 0f)
+            if (!agent.pathPending)
+            {
+                if (agent.remainingDistance <= agent.stoppingDistance)
                 {
-                    // Done
+
+                    abilities.Use(0);
+
+                    if (!agent.hasPath || agent.velocity.sqrMagnitude == 0f)
+                    {
+                        // Done
+                    }
                 }
             }
         }
-        for (int i = 0; i < targets.Length; i++)
+        if (targets[targetIndex] != null)
         {
-            if(targets[i] != null && targetIndex == i){
-                break;
-            }
-            else if (targets[i] != null && targetIndex != i)
-            {
-                SetTarget(i);
-                break;
-            }
+            SetTarget(targetIndex + 1 % targets.Length);
         }
     }
 
     void SetTarget (int i)
     {
-        agent.SetDestination(targets[i].transform.position);
-        targetIndex = i;
+        if (targets != null)
+        {
+            agent.SetDestination(targets[i].transform.position);
+            targetIndex = i;
+            targetSet = true; 
+        }
     }
 
 }
