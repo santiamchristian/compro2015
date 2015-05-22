@@ -10,9 +10,9 @@ GameObject:
   - 4: {fileID: 494080}
   - 198: {fileID: 19894080}
   - 199: {fileID: 19994080}
-  - 136: {fileID: 13694080}
   - 114: {fileID: 11494080}
   - 54: {fileID: 5432028}
+  - 65: {fileID: 6580366}
   m_Layer: 8
   m_Name: Hurricane
   m_TagString: Untagged
@@ -26,7 +26,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 194080}
-  m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106829}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 12.2799997, y: -.310000002, z: -7.28999996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -42,11 +42,23 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &6580366
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 194080}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.75637722, y: 2.76807928, z: 1.39759064}
+  m_Center: {x: -.106595039, y: .88403964, z: 1.76303196}
 --- !u!114 &11494080
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -60,28 +72,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   shooterIndex: 0
-  wall: 0
+  wall: 1
   damage: 20
   expires: 1
   duration: 10
-  distanceFromGround: .100000001
+  distanceFromGround: 2
   dropSpeed: 0
   positionOffset: {x: 0, y: 0, z: 0}
   coolDown: 3
+  continueAfterHit: 1
+  useGravity: 0
   LaunchDistance: 0
---- !u!136 &13694080
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 194080}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 3
-  m_Height: 3.02999997
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!198 &19894080
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -321,7 +322,7 @@ ParticleSystem:
     serializedVersion: 2
     enabled: 1
     type: 7
-    radius: 1.75570583
+    radius: .56037426
     angle: 59.8318214
     length: 5
     boxX: 1

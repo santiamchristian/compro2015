@@ -80,6 +80,8 @@ MonoBehaviour:
   dropSpeed: 10
   positionOffset: {x: 0, y: 0, z: 0}
   coolDown: 3
+  continueAfterHit: 1
+  useGravity: 0
 --- !u!198 &19800622
 ParticleSystem:
   m_ObjectHideFlags: 1

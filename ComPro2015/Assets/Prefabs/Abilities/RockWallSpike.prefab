@@ -57,8 +57,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 154418}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: .180000007}
+  m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106829}
+  m_LocalPosition: {x: -2.03999996, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 454420}
@@ -82,8 +82,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 194278}
-  m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106829}
-  m_LocalPosition: {x: 0, y: 0, z: -7.36000013}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.37580156, y: -1.86999989, z: -19.7380924}
   m_LocalScale: {x: .899999976, y: .899999976, z: .899999976}
   m_Children:
   - {fileID: 454418}
@@ -141,8 +141,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.74381852, y: 3.28900933, z: 9.07515907}
-  m_Center: {x: -.871908426, y: 1.14450455, z: .995889306}
+  m_Size: {x: 8.316926, y: 3.33231735, z: 2.02145219}
+  m_Center: {x: -1.31970203, y: 1.62432575, z: .6543414}
 --- !u!95 &9554420
 Animator:
   serializedVersion: 3
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   shooterIndex: 0
-  wall: 1
+  wall: 0
   damage: 10
   expires: 1
   duration: 10
@@ -179,6 +179,8 @@ MonoBehaviour:
   dropSpeed: 0
   positionOffset: {x: 0, y: 0, z: 0}
   coolDown: 10
+  continueAfterHit: 1
+  useGravity: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

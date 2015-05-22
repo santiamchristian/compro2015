@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 430436}
   - 198: {fileID: 19830438}
   - 199: {fileID: 19930438}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lightning_Cloud
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ GameObject:
   - 4: {fileID: 430438}
   - 198: {fileID: 19830440}
   - 199: {fileID: 19930440}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lightning_Bolt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   - 114: {fileID: 11430440}
   - 54: {fileID: 5430440}
   - 65: {fileID: 6530440}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lightning
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -138,6 +138,8 @@ MonoBehaviour:
   dropSpeed: 0
   positionOffset: {x: 0, y: 0, z: 0}
   coolDown: 1
+  continueAfterHit: 1
+  useGravity: 0
 --- !u!198 &19830438
 ParticleSystem:
   m_ObjectHideFlags: 1

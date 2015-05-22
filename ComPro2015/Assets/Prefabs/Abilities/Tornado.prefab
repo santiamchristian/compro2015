@@ -108,6 +108,7 @@ MonoBehaviour:
   dropSpeed: 0
   positionOffset: {x: 100, y: 100, z: 0}
   coolDown: 3
+  continueAfterHit: 1
   LaunchDistance: 60
 --- !u!198 &19815738
 ParticleSystem:

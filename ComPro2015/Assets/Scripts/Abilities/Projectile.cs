@@ -15,6 +15,7 @@ public class Projectile : MonoBehaviour
     public float coolDown = 1;
     protected float elapsedTime;
     public bool continueAfterHit = false;
+    public bool useGravity = false;
 
 
     // Use this for initialization
@@ -27,8 +28,12 @@ public class Projectile : MonoBehaviour
     public virtual void Update()
     {
         elapsedTime += Time.deltaTime;
-        rigidbody.velocity = transform.TransformDirection(Vector3.forward) * speed;
-        Move();
+
+        if (!useGravity)
+        {
+            rigidbody.velocity = transform.TransformDirection(Vector3.forward) * speed;
+            Move();
+        }
         if (expires && elapsedTime >= duration)
             Destroy();
     }
@@ -41,7 +46,7 @@ public class Projectile : MonoBehaviour
     {
         if (!wall) { 
             Health health = other.GetComponent<Health>();
-            if (health == null)
+            if (health == null && other.tag != "Terrain")
                 Destroy();
             else if (health.playerIndex != shooterIndex)
             {

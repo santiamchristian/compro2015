@@ -174,11 +174,12 @@ MonoBehaviour:
   wall: 0
   damage: 10
   expires: 1
-  duration: 5
-  distanceFromGround: 3
+  duration: 10
+  distanceFromGround: 1
   dropSpeed: 0
   positionOffset: {x: 0, y: 0, z: 0}
   coolDown: 3
+  continueAfterHit: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
