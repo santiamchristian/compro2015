@@ -59,6 +59,18 @@ public class InputController : MonoBehaviour
                 {
                     Attack(i, 0);
                 }
+                if (gamePad.LeftTrigger > 0)
+                {
+                    Attack(i, 1);
+                }
+                if (gamePad.RightShoulder)
+                {
+                    Attack(i, 2);
+                }
+                if (gamePad.LeftShoulder)
+                {
+                    Attack(i, 3);
+                }
             }
             else
             {
