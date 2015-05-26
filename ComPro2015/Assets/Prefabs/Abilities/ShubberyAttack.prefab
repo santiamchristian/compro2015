@@ -45,6 +45,7 @@ GameObject:
   - 114: {fileID: 11423764}
   - 54: {fileID: 5477888}
   - 136: {fileID: 13640706}
+  - 136: {fileID: 13648352}
   m_Layer: 0
   m_Name: ShubberyAttack
   m_TagString: Untagged
@@ -181,6 +182,8 @@ MonoBehaviour:
   dropSpeed: 0
   positionOffset: {x: 0, y: 0, z: 0}
   coolDown: 20
+  continueAfterHit: 0
+  useGravity: 0
 --- !u!136 &13640706
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -189,6 +192,19 @@ CapsuleCollider:
   m_GameObject: {fileID: 176710}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 4.25
+  m_Height: 12.7799997
+  m_Direction: 1
+  m_Center: {x: -.0500000007, y: 2.97000003, z: -.790000021}
+--- !u!136 &13648352
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 176710}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 4.25
   m_Height: 12.7799997
