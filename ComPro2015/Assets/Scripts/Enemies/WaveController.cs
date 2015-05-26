@@ -36,7 +36,7 @@ public class WaveController : MonoBehaviour {
             }
             else if (enemiesSpawnedThisWave > enemiesPerWave * (waveMultiplier * wave))
             {
-                if (enemyContainer.GetComponentsInChildren<Enemy>().Length == 0) { 
+                if (enemyContainer.transform.childCount == 0) { 
                     enemiesSpawnedThisWave = 0;
                     wave++;
                     elapsedTime = -timeBetweenWaves;
