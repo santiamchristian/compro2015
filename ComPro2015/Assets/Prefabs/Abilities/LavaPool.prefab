@@ -11,7 +11,7 @@ GameObject:
   - 65: {fileID: 6580828}
   - 54: {fileID: 5487356}
   - 114: {fileID: 11487356}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LavaPool
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ GameObject:
   - 4: {fileID: 481474}
   - 33: {fileID: 3381472}
   - 23: {fileID: 2381472}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LavaPoolGameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 481476}
   - 95: {fileID: 9581472}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lava Pool
   m_TagString: Untagged
   m_Icon: {fileID: 0}
