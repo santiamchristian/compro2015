@@ -46,7 +46,7 @@ public class Enemy : MonoBehaviour {
         }
         if (targets[targetIndex] != null)
         {
-            SetTarget(targetIndex + 1 % targets.Length);
+            SetTarget(targetIndex % (targets.Length - 1));
         }
     }
 
